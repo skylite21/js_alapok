@@ -17,6 +17,7 @@ To install all dependecies in package.json, issue the following command
 npm install
 ```
 
+# Run
 
 After all packages installed successfully, run the live server with the following command
 
