@@ -1,6 +1,4 @@
-/*jslint devel: true */
 /*global $, jQuery, alert*/
-/*jslint indent: 2 */
 
 
 // minden ami ebben a blokkban van az strict mode-ban lesz
