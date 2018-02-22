@@ -28,7 +28,7 @@ $('.image-popup').magnificPopup({
 
 // minden hidden-image class-al rendelkező elemet elrejtünk
 // sima javascriptet használunk ehhez:
-[].forEach.call(document.querySelectorAll('.hidden-image'),
+[].forEach.call(document.querySelectorAll('.hidden'),
   function (el) {
     el.style.display = 'none';
 });
@@ -36,7 +36,7 @@ $('.image-popup').magnificPopup({
 
 // ez ugyanazt csinálja mint a fentebbi kód, csak ez
 // a jquery library segítségével:
-$('.hidden-image').css('display', 'none');
+$('.hidden').css('display', 'none');
 
 
 }()); // end of strict mode
