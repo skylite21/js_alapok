@@ -1,4 +1,10 @@
 {
-    "order-alphabetical": false,
-    "box-model": true
+  "ignore": [
+    "order-alphabetical",
+	"box-model"
+  ],
+  "warnings": [
+  ],
+  "errors": [
+  ]
 }
