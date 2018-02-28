@@ -6,6 +6,9 @@ szoveg = '3';
 console.log(szoveg);
 
 
+//------------------------------------------------------- 
+//-------- SZEKVENCIA ----------------------------------- 
+//------------------------------------------------------- 
 // szekvencia: a program az utasításokat, soronként hajtja végre 
 // egymás után..
 
@@ -26,6 +29,22 @@ console.log(szoveg);
   // ujradeklarálhatjuk:
   var szoveg2 = 'valami';
 
+
+  //------------------------------------------------------- 
+  //------------------------------------------------------- 
+  //--------------- Adattípusok ---------------------------
+  //------------------------------------------------------- 
+  //------------------------------------------------------- 
+  // Adattípusok javascript-ben:
+  // Number: lebegőpontos számok, decimális és egész számok
+  // String: karakterlánc, szövegekre
+  // Boolean: Logikai változó, true vagy false értéket vehet fel
+  // Undefined: Egy olyan adattípus amelynek az értéke még nem meghatározott
+  // Null: üres érték
+
+  // Dynamic Typing: Nem szükséges definiálnunk a változók
+  // típusát, automatikusan felismeri azokat a javascript
+
   let szoveg3 = 'szoveg3 ezt let-el hoztuk letre';
   console.log(szoveg3);
   // a let kulcsszoval letrehozott valtozokat nem lehet ujradeklaralni, 
@@ -33,8 +52,9 @@ console.log(szoveg);
   // let szoveg3 = 'szoveg3 ezt let-el hoztuk letre';
 
   // ez egy értékadás, nem deklarálás: 
+  szoveg3 = 'uj erteket kap a szoveg3';
 
-  // automatic semicolon insertion, 
+  // automatic semicolon insertion:
   // ha kihagyjuk a pontosvesszőt, akkor a javascript
   // megpróbálja betenni helyettünk, (ez néha sikerül néha nem...)
   // https://github.com/twbs/bootstrap/issues/3057
@@ -73,6 +93,11 @@ console.log(szoveg);
   // logikai változó, két érteke lehet, true vagy false
   let kapcsolo = false;
 
+
+  //------------------------------------------------------- 
+  //-------- Elágazás -------------------------------------
+  //------------------------------------------------------- 
+  //
   // elágazás, ha a feltételben lévő rész igaz, akkor a {}-ban lévő rész
   // lefut
   if (kapcsolo === true) {
@@ -113,6 +138,12 @@ console.log(szoveg);
   szam++;
   szam+=4;
   console.log('szam erteke: '+szam);
+
+  // ---------------------------------------------------------------------
+  // ------------------------------   Operátorok -------------------------
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+
   
   console.log('uj sort a \n karakterrel lehet csinalni');
 
@@ -134,6 +165,8 @@ console.log(szoveg);
   // ezt a változó típust tömbnek hívjuk
   // több elemet tartalmazhat a tömb
   let szamok = [3,4,5,6,4,6,9];
+  let numbers = new Array(23, 34, 45, 5);
+  console.log('a szamok típusa '+typeof(numbers));
   // a javascriptben a tömb is object
   console.log('a szamok típusa '+typeof(szamok));
   console.log('a tomb nulladik eleme: '+szamok[0]);
@@ -166,11 +199,14 @@ console.log(szoveg);
   // ---------------------------------------------------------------------
   // -----------------------------  Fügvények  ---------------------------
   // ---------------------------------------------------------------------
+  // a fügvény egy olyan kódrész, amit később újra fel tudunk használni
+  // programming principle: DRY
+  // DRY =  Dont Repeat Yourself
 
   // 1. function statement
   // erre érvényes a hoisting
+  // statement: not produces any value, just performs an action
 
-  // ez egy olyan kódrész, amit később újra fel tudunk használni
   // az osszeadás fugvénynek két bementi paramétere van
   function osszeadas(szam1, szam2) {
     // a szam1 és a szam2 number tipusu kell hogy legyen (mindkettő feltétel
@@ -189,6 +225,7 @@ console.log(szoveg);
 
   // 2. Function Expression
   // erre nem érvényes a hoisting
+  // expression: produces a value.. like 4 + 5 ...
   let convertToNumber = function(szam) {
     let konvertaltSzam = parseInt(szam);
     if (isNaN(konvertaltSzam)) {

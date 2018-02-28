@@ -14,10 +14,7 @@ module.exports = {
         "no-console": 0,
         "no-redeclare": 0,
         "no-undef": 0,
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
+        "linebreak-style": 0,
         "quotes": [
             "error",
             "single"
@@ -25,6 +22,7 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "no-unused-vars": 0
     }
 };

@@ -51,9 +51,11 @@
   myPlayer.level = 1; // ezzel kibővítjük a myPlayer-t még egy property-vel
 
   // kibővítjük a myPlayer object-et de most egy fugvenyt kap nem egy változót:
+  // object-ben lévő function-t metódusnak hívunk (method)
   myPlayer.levelUp = function() {
-    myPlayer.level++;
-    myPlayer.health = myPlayer.health + ( myPlayer.level*100 );
+    this.level++;
+    this.health = this.health + ( this.level*100 );
+    console.log(this.name+' Leveled up: '+this.health);
   };
 
   // meghivjuk a myPlayer object levelup property-jét ami egy fugveny, ezért kell a zárójel
