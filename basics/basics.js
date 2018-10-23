@@ -25,9 +25,8 @@ console.log(szoveg);
   var szoveg2 = 'valami';
   console.log(szoveg2);
 
-  // erre nem kapunk hibát mert a var kulcsszóval deklarált változót
-  // ujradeklarálhatjuk:
-  var szoveg2 = 'valami';
+  // erre nem kapunk hibát mert a var kulcsszóval deklarált változót újradeklarálhatjuk
+  // var szoveg2 = 'valami';
 
 
   //------------------------------------------------------- 
@@ -35,7 +34,7 @@ console.log(szoveg);
   //--------------- Adattípusok ---------------------------
   //------------------------------------------------------- 
   //------------------------------------------------------- 
-  // Adattípusok javascript-ben:
+  // Adattípusok/primitive-ek javascript-ben:
   // Number: lebegőpontos számok, decimális és egész számok
   // String: karakterlánc, szövegekre
   // Boolean: Logikai változó, true vagy false értéket vehet fel
@@ -107,6 +106,23 @@ console.log(szoveg);
   }
 
   let nev = 'Geza';
+
+  // why not to use ==
+  typeof(NaN); // 'number'
+  0 == ''; //true
+  '' == '0'; //false
+  0 == '0'; //true
+  false == 'false'; //false
+  false == '0'; //true
+  ' \t\r\n ' == 0; //true
+
+  // always use === to be sure, but still remember:
+
+  // NaN === NaN; // false
+  // NaN !== NaN; // true
+  // use isNaN() 
+
+
   // három darab egyenlőségjellel hasonlítunk össze értékeket!!
   // a háromdarab egyenlőségjel a típust is hasonlítja 
   // a kettő darab egyenlőségjel nem hasonlít tipust: pl
@@ -178,6 +194,7 @@ console.log(szoveg);
   // for ciklusban meg kell adni hogy mettől meddig menjünk
   // és azt is hogy hányassával lépkedjünk, az i++ azt jelenti hogy 
   // egyessével megyünk
+  // for (let szam of szamok)
   for (let i = 0; i < szamok.length; i++ ) {
     // a szamok i-edik elemét kiírjuk:
     console.log('a szam: '+szamok[i]);
