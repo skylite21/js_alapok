@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "property-sort-order": 0,
+    "mixins-before-declarations": [ "1", exclude: ['breakpoint', 'media', 'mq'] ]
+  }
+}

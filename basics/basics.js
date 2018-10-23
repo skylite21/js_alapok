@@ -10,8 +10,8 @@ console.log(szoveg);
 //-------- SZEKVENCIA ----------------------------------- 
 //------------------------------------------------------- 
 // szekvencia: a program az utasításokat, soronként hajtja végre 
-// egymás után..
 
+// egymás után..
 
 // innentol minden strict mode-ban van:
 (function () {
@@ -275,3 +275,4 @@ console.log(szoveg);
 
 }()); // itt van vege a strict mode-nak, ez utan mar nem fog 
 // strict mode-ban futni a kod
+
