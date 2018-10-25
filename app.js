@@ -33,5 +33,46 @@
   // a jquery library segítségével:
   $('.hidden').css('display', 'none');
 
+  // http://learn.jquery.com/using-jquery-core/document-ready/
+  $(document).ready(function() {
+    console.log('hello');
+    // kiválasztjuk a menu id-vel rendelkező html elemet és átírjuk a tartalmát
+    $('#menu').text('Main menu');
+    // camelCase mindenSzoNagyBetuKiveveAzElso
+
+    // lekérdezzük a #menu id tartalmát és betöltjük egy változóba
+    let menuTitle = $('#menu').text();
+    console.log(menuTitle);
+    if (menuTitle === 'Main menu') {
+      $('#menu').addClass('main-menu');
+    }
+
+    // létrehozzuk a menüpontokat:
+
+    let menuContainer = $('<ul class="menu"></ul>');
+    let menuItem = $('<li class="main-menu-item"></li>').text('elso menupont');
+
+    // self closing tag... 
+    let testTag = $('<div/>');
+
+    testTag.attr('test', '2');
+    $('body').append(testTag);
+
+    // a menut és a menupont html-t a #menu id-vel rendelkező elembe betesszük:
+    $('#menu').append(menuContainer);
+    $('.menu').append(menuItem);
+
+    $('.image-link').magnificPopup({
+      type:'image',
+      mainClass: 'mfp-fade',
+      gallery:{
+        enabled:true
+      }
+    });
+
+    // $('.bxslider').bxSlider({useCSS: false});
+
+  });
+
 
 }()); // end of strict mode
