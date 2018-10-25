@@ -1,6 +1,7 @@
 ///////////////////////////////////////
 // Lecture: Arrays
 
+// arrays are special variables, they can hold multiple variables (even arrays...)
 var names = ['John', 'Jane', 'Mark'];
 // means the same but looks different. (this also showes that arrays are objects too..)
 var years = new Array(1990, 1969, 1948);

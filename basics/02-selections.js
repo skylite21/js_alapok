@@ -10,18 +10,33 @@ let name = 'John';
 let age = 23;
 
 if (age < 18 ) {
+  // this code block will only run if age < 18
   console.log(name+' kiskorú férfi.');
 } else if ( age >= 20 && age < 30 ) {
   console.log(name+' fiatal férfi. ');
 } else {
+  // this will only run if the previous two code blocks where 
+  // evaluated to false
   console.log(name+' férfi'); 
 }
+// this will always run
 console.log('asd');
+
+//a really really pointless if statement:
+if (true) {
+  console.log('this will always run too...');
+}
+
+// the same pointless if statement
+if (1 === 1) {
+  console.log('this will always run too...');
+}
 
 let job = 'engineer';
 
 job = prompt('Mit dolgozik John?');
 
+// the switch statement is often use when there are multiple cases...
 switch (job) {
 case 'teacher':
   console.log('John tanít');

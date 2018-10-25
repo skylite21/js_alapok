@@ -1,8 +1,12 @@
 ///////////////////////////////////////
 // Lecture: Loops
 
+// loops are going to repeat the codeblock until they dont...
+// until the (condition) is true
 
+//this will repeat the codeblock 10 times..
 for (var i = 0; i < 10; i++) {
+  // will print 0, 1, 2 ....9
   console.log(i);
 }
 

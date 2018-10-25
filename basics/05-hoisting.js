@@ -1,7 +1,11 @@
-//hoisting
+//hoisting is a wierd JS thing...
+
 console.log('a palack értéke: '+palack); // ebben a sorban már létezik
 // a palack változó, csak még nem kapott értéket, ezért "undefined"
 // csak a var kulcsszóval deklarált változókra érvényes a hoisting
+
+// itt deklaráljuk a palack változót mégis fegy fentebbi sorban már létezik...
+// ha nem létezne errort dobna az interpreter... de nem dob errort
 var palack = 'szilva';
 
 let szam = 0;
