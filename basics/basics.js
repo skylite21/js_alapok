@@ -28,6 +28,9 @@ console.log(szoveg);
   // erre nem kapunk hibát mert a var kulcsszóval deklarált változót újradeklarálhatjuk
   // var szoveg2 = 'valami';
 
+  console.log("Hello\nEzt ujsorbairom\tEzt egytabbal beljebb irom");
+  console.log("XXXXXXXXXXXXXXXXXXXXX\rcarrige return");
+
 
   //------------------------------------------------------- 
   //------------------------------------------------------- 
@@ -118,8 +121,8 @@ console.log(szoveg);
 
   // always use === to be sure, but still remember:
 
-  // NaN === NaN; // false
-  // NaN !== NaN; // true
+  NaN === NaN; // false
+  NaN !== NaN; // true
   // use isNaN() 
 
 
@@ -142,18 +145,6 @@ console.log(szoveg);
   // itt is ha 2 db egyenlőségjel van akkor vizsgáljuk a típust is
   // ha csak egy lenne akkor nem vizsgálnánk a típust...
   // if ( a !== ) ...
-
-  //hoisting
-  console.log('a palack értéke: '+palack); // ebben a sorban már létezik
-  // a palack változó, csak még nem kapott értéket, ezért "undefined"
-  // csak a var kulcsszóval deklarált változókra érvényes a hoisting
-  var palack = 'szilva';         
-  
-  let szam = 0;
-  // ez olyan mint ha azt irnám hogy szam = szam + 1
-  szam++;
-  szam+=4;
-  console.log('szam erteke: '+szam);
 
   // ---------------------------------------------------------------------
   // ------------------------------   Operátorok -------------------------
@@ -194,7 +185,22 @@ console.log(szoveg);
   // for ciklusban meg kell adni hogy mettől meddig menjünk
   // és azt is hogy hányassával lépkedjünk, az i++ azt jelenti hogy 
   // egyessével megyünk
-  // for (let szam of szamok)
+
+  var x = 0;
+  x++;
+  console.log("x = "+x);
+  x += 1;
+  console.log("x = "+x);
+
+  console.log("x = "+(++x));
+  console.log("x = "+(x++)); // ha mögé írod nem ad hozzá egyet ilyenkor!
+  // you have to know what you're doing, even if its javascript  :D
+
+
+
+
+  // for (let szam of szamok).... *see arrays...
+
   for (let i = 0; i < szamok.length; i++ ) {
     // a szamok i-edik elemét kiírjuk:
     console.log('a szam: '+szamok[i]);
@@ -257,7 +263,7 @@ console.log(szoveg);
   convertToNumber('sdfsdf');
 
   // camelCasing = aMasodikSzotolMindenBetutNagyBetuvelIrok
-  // JS-ben gyakran hasznnáljuk
+  // JS-ben gyakran hasznnáljuk a camelCasing-et kivéve class-okra azoknak az első betűje is nagybetű
   function pontosIdo() {
     // lokális változó, csak ebben a fugvenyben van értelme
     // variable scope: local
@@ -280,6 +286,8 @@ console.log(szoveg);
   // az ido valtozonak itt nincs ertelme, mert a pontosIdo fgv-en belul
   // deklaráltuk, 
   // console.log('a pontos ido: '+ido);
+
+
 
 
   // IIFE: immidiately invoked function expression:

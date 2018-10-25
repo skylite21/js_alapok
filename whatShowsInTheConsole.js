@@ -1,3 +1,6 @@
+
+// what shows in the console??
+
 let a = 9;
 let b = a;
 b = -4;

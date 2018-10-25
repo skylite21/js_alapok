@@ -92,6 +92,34 @@
   
   console.log(dogs);
 
+  kutyak = animals.filter(function(animal) {
+    return animal.fajtaja === "kutya";
+  })
+
+  var kutyaE = function (animal) {
+    return animal.fajtaja === "kutya"
+  }
+
+ kutyak = animals.filter(kutyaE)
+
+ console.log("======= all dogs with filter: ========\n ");
+ console.log(kutyak);
+
+
+ var inventory = [
+    {name: 'apples', quantity: 2},
+    {name: 'bananas', quantity: 0},
+    {name: 'cherries', quantity: 5}
+ ];
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find?v=example
+  var requestedFruit = "apples";
+
+  function findCherries(fruit) {
+    return fruit.name === this.element;
+  }
+
+console.log(inventory.find(findCherries, { element: requestedFruit}));
+
 
   // --------------------  objects, classes ES5 way --------------------
 
