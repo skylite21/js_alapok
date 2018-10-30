@@ -22,8 +22,8 @@ module.exports = {
         "no-undef": 0,
         "linebreak-style": 0,
         "quotes": [
-            "error",
-            "single"
+            // "error",
+            // "single"
         ],
         "semi": [
             "error",
