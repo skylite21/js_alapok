@@ -1,26 +1,21 @@
-db = false;
+db = true;
 const promise = new Promise( (resolve, reject) => {
   console.log('start value is 2');
   if (db) {
     resolve(2);
   } else {
-    reject('asd');
+    reject(false);
   }
 });
 
-promise
-  .then(first).catch(errorhandler)
-  .then(second).catch(errorhandler)
-  .then(third).catch(errorhandler)
-  .then( (response) => {console.log(response); });
 
-function errorhandler(){
-  console.log('error');
-  return Promise.reject(err);
+function errorhandler(err){
+  console.log('error', err);
 }
 
 function first(value) {
   console.log('adding 1');
+  // throw new Error("test error outside");
   return value+1;
 }
 
@@ -33,3 +28,9 @@ function third(value) {
   console.log('adding 3');
   return value+3;
 }
+
+promise
+  .then(first).catch(errorhandler)
+  .then(second).catch(errorhandler)
+  .then(third).catch(errorhandler)
+  .then( (response) => {console.log("the response is", response); });

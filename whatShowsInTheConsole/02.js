@@ -6,3 +6,5 @@ let x = console.log('hello');
 let y = function () {
   console.log('hello');
 };
+
+console.log(x);
