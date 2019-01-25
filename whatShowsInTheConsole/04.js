@@ -4,7 +4,7 @@
 let f;
 console.log(f);
 
-
+// hoisting
 console.log(v);
 var v;
 

@@ -3,16 +3,19 @@
 
 let vehicle = "bus";
 
+// function expresssion
 let drive = function() {
   console.log("driving a "+vehicle);
 }
+
 drive();
 
 let food = "pizza";
 cook();
 
+// function declaration
 function cook() {
-  console.log('cooking a '+food);
+  console.log('make a '+food);
 }
 
 

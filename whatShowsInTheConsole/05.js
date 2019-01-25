@@ -11,4 +11,3 @@ console.log(typeof([]));
 
 console.log(typeof(false));
 
-

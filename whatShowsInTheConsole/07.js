@@ -3,6 +3,7 @@
 
 let a = 9;
 a = 9/'seven';
+console.log(a);
 
 if (a === NaN) {
   console.log('a is not a number');
