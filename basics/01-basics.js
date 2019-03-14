@@ -95,6 +95,11 @@ console.log(szoveg);
   // logikai változó, két érteke lehet, true vagy false
   let kapcsolo = false;
 
+  // number tipusú változót egyel növelünk:
+  szam++; // ez egy rövidebb jelölése annak hogy szam=szam+1
+
+  // number tipust egy másikkal növelünk:
+  szam+=b   // ez ugyanaz mintha azt írnánk hogy szam = szam + b;
 
   //------------------------------------------------------- 
   //-------- Elágazás -------------------------------------

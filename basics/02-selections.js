@@ -4,10 +4,10 @@
 //  --------------------------------------------------------------------
 
 // akkor használunk elágazást amikor egy bizonyos feltétel vagy 
-// feltételek alapján akarjuk hogy lefusson a kódunk
+// feltételek alapján akarjuk hogy lefusson egy adott kódrészünk
 
-let name = 'John';
-let age = 23;
+const name = 'John';
+const age = 23;
 
 if (age < 18 ) {
   // this code block will only run if age < 18
@@ -34,6 +34,7 @@ if (1 === 1) {
 
 let job = 'engineer';
 
+// prompt: browser only;
 job = prompt('Mit dolgozik John?');
 
 // the switch statement is often use when there are multiple cases...

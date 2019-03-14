@@ -1,5 +1,5 @@
 ///////////////////////////////////////
-// Lecture: Loops
+//  Loops : ciklusok
 
 // loops are going to repeat the codeblock until they dont...
 // until the (condition) is true

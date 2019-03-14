@@ -1,10 +1,10 @@
 ///////////////////////////////////////
-// Lecture: Arrays
+//  Arrays = Tömbök
 
 // arrays are special variables, they can hold multiple variables (even arrays...)
-var names = ['John', 'Jane', 'Mark'];
+const names = ['John', 'Jane', 'Mark'];
 // means the same but looks different. (this also showes that arrays are objects too..)
-var years = new Array(1990, 1969, 1948);
+const years = new Array(1990, 1969, 1948);
 
 
 console.log(names[2]);
@@ -12,7 +12,7 @@ names[1] = 'Ben';
 console.log(names);
 
 
-var john = ['John', 'Smith', 1990, 'designer', false];
+const john = ['John', 'Smith', 1990, 'designer', false];
 
 // adds another element to the end of the array
 john.push('blue');
@@ -28,13 +28,20 @@ john.shift();
 console.log(john);
 
 
-//az indexOf megnézi hogy hanyadik elem a tömbben amit átadunk neki
+// add an element to a specific location: 
+// startIndex, deleteCount, ...items
+john.splice(0, 0,'Mr.');
+console.log(john);
+
+// az indexOf megnézi hogy hanyadik elem a tömbben a keresett elem (a bemeneti paraméter)
 // ha nincs benne az elem a tömbben akkor az indexOf -1-et fog vissza adni
 if (john.indexOf('teacher') === -1) {
   console.log('John is NOT a teacher.');
 }
 
-// Looping trough arrays:
+// Looping trough arrays: tömbön végig lépkedni ciklussal lehet
+
+const szamok = [4, 6, 30, 20, 10];
 
 for (let i = 0; i < szamok.length; i++) {
     if (szamok[i] === 30) {
@@ -57,3 +64,7 @@ for (let i of szamok) { // van of kulcsszón kívül még "in" de az teljesen ma
       console.log(i);
     }
 }
+
+// array is an object!!! 
+console.log(typeof(names));
+console.log(names instanceof Array);
