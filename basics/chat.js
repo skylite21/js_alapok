@@ -6,7 +6,7 @@ const s = net.Server( (socket) => {
 
   sockets.push(socket);
   socket.on('data', (d) => {
-    for (let i=0; i<sockets.length; i++) {
+    for (let i=0; i < sockets.length; i++) {
       if (sockets[i] == socket) continue;
       sockets[i].write(d);
     }

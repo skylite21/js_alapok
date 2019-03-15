@@ -1,6 +1,10 @@
 //closure : a koszones valtozo egy fugvenyben van megis
 //          a belso fugveny szamara is elerheto az erteke
 
+// IIFE:  "immediately invoked function expression" 
+//        egy olyan fügvény ami azonnal meghívódik
+
+
 let koszonjNekem = function (keresztNev) {
   let koszones = 'szia ';
   let osszeRakas = function () {
@@ -67,5 +71,12 @@ let szamHozzaadas = (function() {
  console.log("Szám hozzáadás: "+szamHozzaadas(5) );
 
 
+// Assigning the IIFE to a variable stores the function's return value, not the function definition itself.
+const user = (function(){
+  const user = 'John';
+  console.log(`you are logged in as ${user}`);
+  return user;
+})();
 
+console.log(user);
 

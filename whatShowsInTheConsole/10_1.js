@@ -13,7 +13,7 @@ for(let person of persons) {
 }
 
 females = 0;
-for (let i = 0; i< persons.length; i++) {
+for (let i = 0; i < persons.length; i++) {
   if (persons[i][2] === 'female') {
     females++;
   }
