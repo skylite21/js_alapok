@@ -1,7 +1,8 @@
+// fetch API is only available in the browser! in node you could use node-fetch  // https://www.npmjs.com/package/node-fetch
 
 // fetch with Promises
 fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json()) 
+  .then(response => response.json())  // https://developer.mozilla.org/en-US/docs/Web/API/Body/json
   .then(data => {
     console.log(data) // Prints result from `response.json()` in getRequest
   })

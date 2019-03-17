@@ -8,7 +8,8 @@ module.exports = {
       "sourceType": "module",
       "ecmaFeatures": {
         "jsx": false
-      }
+      },
+      "ecmaVersion": 2017
     },
     "plugins": [
       "import"
@@ -22,8 +23,8 @@ module.exports = {
         "no-undef": 0,
         "linebreak-style": 0,
         "quotes": [
-            // "error",
-            // "single"
+            "warn",
+            "single"
         ],
         "semi": [
             "error",
