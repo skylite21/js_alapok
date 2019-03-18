@@ -21,6 +21,8 @@
   let myObject = {};
   console.log('a myObject típusa: '+typeof(myObject));
 
+  // https://stackoverflow.com/questions/4348478/what-is-the-difference-between-object-keys-with-quotes-and-without-quotes
+  // a key körül lévő aposztrof elhagyható a legtöbb esetben...
   let myPlayer = {
     'name': 'John',    // kulcs : érték párok sorozata...
     'health': 100,    // 'key': value
