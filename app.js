@@ -3,7 +3,7 @@
 // fog hibat jelezni a bongeszo (es kevesebb lesz a nem vart munkodes)
 // read more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 (function () {
-  // strict mode bekapcsolasa:
+  // strict mode bekapcsolasa
   'use strict';
 
   // console-ra kiirjuk a hello word stringet
