@@ -4,10 +4,10 @@ const getUserData = function() {
     age: 16,
     weight: 50,
     hair: 'brown'
-  }
+  };
   console.log(data);
   return data;
-}
+};
 getUserData();
 console.log(getUserData);
 

@@ -1,7 +1,7 @@
 
 // 10.1 what shows in the console?
 
-let persons = [['John', '23', 'male'], ['Kate', '20', 'female']]
+let persons = [['John', '23', 'male'], ['Kate', '20', 'female']];
 
 for(let person of persons) {
   if(person[2] === 'male') {

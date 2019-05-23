@@ -2,7 +2,7 @@
 
 // 10. what shows in the console?
 
-toDos = ['buy potatos', '', 'take out the trash', 'clean the kitchen'];
+const toDos = ['buy potatos', '', 'take out the trash', 'clean the kitchen'];
 
 console.log(toDos[4]);
 

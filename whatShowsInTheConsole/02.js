@@ -11,6 +11,11 @@ let y = function () {
 console.log(x);
 
 
-let myfunc = function() {};
+let myfunc = function() {
+  return;
+};
+
+
+
 console.log(myfunc);
 console.log(myfunc());

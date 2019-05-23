@@ -18,7 +18,7 @@ if(false || x === 100) {
 }
 
 
-if(true || x === 100) {
+if(false || x === 95) {
   console.log('We arrived');
 } else {
   console.log('We are not there yet');

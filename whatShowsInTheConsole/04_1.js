@@ -1,16 +1,16 @@
 
 // 4.1 what shows in the console?
 
-let vehicle = "bus";
+let vehicle = 'bus';
 
 // function expresssion
 let drive = function() {
-  console.log("driving a "+vehicle);
-}
+  console.log('driving a '+vehicle);
+};
 
 drive();
 
-let food = "pizza";
+let food = 'pizza';
 cook();
 
 // function declaration

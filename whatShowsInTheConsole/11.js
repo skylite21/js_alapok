@@ -7,10 +7,11 @@ function getStatus() {
   function getServerStatus() {
     server = true;
   }
+  getServerStatus();
   if(server) {
     return true;
   }
 }
 
 console.log(getStatus());
-getServerStatus();
+console.log(server);
