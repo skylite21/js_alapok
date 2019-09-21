@@ -1,4 +1,4 @@
-db = true;
+let db = true;
 const promise = new Promise( (resolve, reject) => {
   console.log('start value is 2');
   if (db) {
@@ -33,4 +33,4 @@ promise
   .then(first).catch(errorhandler)
   .then(second).catch(errorhandler)
   .then(third).catch(errorhandler)
-  .then( (response) => {console.log("the response is", response); });
+  .then( (response) => {console.log('the response is', response); });

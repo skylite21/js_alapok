@@ -36,6 +36,3 @@
 // console.log(process);
 
 // in the browser, the 'this' keyword refers to the window object
-
-
-

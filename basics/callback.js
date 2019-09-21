@@ -1,9 +1,9 @@
 let users = ['sam', 'john', 'peters'];
 
 
-// a setTimeout fügvény két paraméterrel dolgozik, 
+// a setTimeout fügvénynek két bementi paramétre van 
 // az első az egy fügvény, a másik pedig egy szám...
-// az adott fügvényt futtatja le a megadott időn belül
+// a fügvényt futtatja le a megadott időn belül
 
 // pl az addUser fügvény úgy fog működni hogy a users tömbbe 200 milisecundum
 // után beteszi az új elemet (a username bemeneti paraméterbe amit megkap)

@@ -83,10 +83,6 @@
 
 
 
-
-
-
-
 // Why use semicolons:
 // whitout the semicolons this will fail as it will try to interpret this as: var i = 23423423(function...
 
