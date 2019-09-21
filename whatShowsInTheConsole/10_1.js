@@ -19,4 +19,8 @@ for (let i = 0; i < persons.length; i++) {
   }
 }
 
-console.log('we have', females, 'female(s)');
+if( females === 1 ) {
+  console.log('we have', females, 'female');
+} else {
+  console.log('we have', females, 'females');
+}

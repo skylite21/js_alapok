@@ -1,7 +1,6 @@
 
 // 11 what shows in the console?
 
-
 function getStatus() {
   let server = false;
   function getServerStatus() {

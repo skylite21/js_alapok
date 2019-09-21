@@ -1,45 +1,16 @@
 
-//callback hell
-function getServerStatus(id, callback) {
-  setTimeout(function() {
-    if (typeof(id) !== 'number') {
-      callback(new Error('ID is not a number!'));
-      return;
-    }
-    const result = `server ${id} is online`;
-    callback(null, result);
-  }, 1000);
+// 14 what shows in the console?
+
+// javascript: non blocking programming language
+
+setTimeout( function(){ console.log('hello'); }, 2000 );
+console.log('world');
+
+let data = 1;
+function calculateData() {
+  data = 10;
 }
 
-getServerStatus(1, function(error, result) {
-  console.log(result);
-});
+setTimeout(calculateData, 2000);
+console.log(data);
 
-getServerStatus(2, function(error, result) {
-  console.log(result);
-});
-
-getServerStatus(3, function(error, result) {
-  console.log(result);
-});
-
-// getServerStatus(1, function(error, result) {
-//   console.log(result);
-//   getServerStatus(2, function(error, result) {
-//     console.log(result);
-//     getServerStatus(3, function(error, result) {
-//       console.log(result);
-//       getServerStatus(4, function(error, result) {
-//         console.log(result);
-//         getServerStatus(5, function(error, result) {
-//           console.log(result);
-//           getServerStatus(6, function(error, result) {
-//             console.log(result);
-//           });
-//         });
-//       });
-//     });
-//   });
-// });
-//
-//

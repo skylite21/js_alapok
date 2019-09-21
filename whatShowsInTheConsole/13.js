@@ -8,9 +8,10 @@ const getUserData = function() {
   console.log(data);
   return data;
 };
-getUserData();
-console.log(getUserData);
 
+getUserData();
+
+console.log(getUserData);
 
 const user = (function(){
   const user = 'John';

@@ -4,7 +4,7 @@
 let vehicle = 'bus';
 
 // function expresssion
-let drive = function() {
+var drive = function() {
   console.log('driving a '+vehicle);
 };
 

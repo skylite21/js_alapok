@@ -1,4 +1,5 @@
 
+// 14 what shows in the console?
 
 function getServerStatus(id) {
   return new Promise(function (resolve, reject) {

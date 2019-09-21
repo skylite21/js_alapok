@@ -1,11 +1,11 @@
 
 // 7.1 what shows in the console?
 
-let weapon = "hammer";
+let weapon = 'hammer';
 let armor = 43;
 let damage = 20;
 
-if( (weapon === "hammer") && (armor > 50) ) {
+if( (weapon === 'hammer') && (armor > 50) ) {
   damage = damage + 30; 
   console.log('extra damage!');
 }

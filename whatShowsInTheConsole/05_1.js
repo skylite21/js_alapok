@@ -10,3 +10,4 @@ console.log(typeof(3+2));
 console.log(typeof(NaN+'f'));
 
 console.log(typeof(Infinity));
+
