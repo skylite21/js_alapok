@@ -1,4 +1,7 @@
-net = require('net');
+// we can also create a chat application with sockets
+// this is a lower level
+// we'll use the net library
+const net = require('net');
 
 let sockets = [];
 
@@ -15,7 +18,7 @@ const s = net.Server( (socket) => {
   socket.on('end', () => {
     let i = sockets.indexOf(socket);
     sockets.splice(i, 1);
-  })
+  });
 } );
 
 s.listen(8000);

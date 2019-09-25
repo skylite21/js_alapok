@@ -5,6 +5,11 @@ let users = ['sam', 'john', 'peters'];
 // az első az egy fügvény, a másik pedig egy szám...
 // a fügvényt futtatja le a megadott időn belül
 
+setTimeout(function(){ console.log('Done'); }, 3000);
+
+// arrow functionnel ugyanez:
+setTimeout( () => console.log('done'), 3000 );
+
 // pl az addUser fügvény úgy fog működni hogy a users tömbbe 200 milisecundum
 // után beteszi az új elemet (a username bemeneti paraméterbe amit megkap)
 
@@ -29,6 +34,9 @@ let users = ['sam', 'john', 'peters'];
 // getUsers();
 //
 //
+// az előző problémát úgy tudjuk megoldani ha 
+// egy callback functionként futtatjuk azt a fügvényt 
+// amit mindenképp később szeretnénk futtatni
 
 function addUser(username, callback) {
   setTimeout( () => { 
@@ -52,3 +60,6 @@ addUser('Jim', getUsers);
 // asnyc-á teszi a műveletet. ha csak sima fügvény lenne
 // setTimeout nélkül akkor szinkron módon futna
 
+// a functional programmingban, a map, és a reduce
+// callback functionökkel dolgozik, illetve 
+// az event listener-ek is 

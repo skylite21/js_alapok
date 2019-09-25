@@ -1,4 +1,6 @@
 
+const fetch = require('node-fetch');
+
 function getRandomDogImage() {
   fetch('https://dog.ceo/api/breeds/image/random')
     .then(response => response.json())

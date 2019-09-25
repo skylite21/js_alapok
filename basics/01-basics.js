@@ -262,34 +262,3 @@ convertToNumber('sdfsdf');
 
 // camelCasing = aMasodikSzotolMindenBetutNagyBetuvelIrok
 // JS-ben gyakran hasznnáljuk a camelCasing-et kivéve class-okra azoknak az első betűje is nagybetű
-function pontosIdo() {
-  // lokális változó, csak ebben a fugvenyben van értelme
-  // variable scope: local
-  let ido = 5; 
-  console.log('a pontos ido: '+ido);
-  // fugveny-re is érvényes a scope, ezt csak a pontosIdo-n 
-  // belul tudom hasznalni
-  // closure: ha ketto fugveny van egymásban akkor a belső fügvény
-  // hozzáfér a külső fügvény változóihoz
-  function pontosIdo2() {
-    console.log('az ido értéke: '+ido);
-  }
-  pontosIdo2();
-}
-
-// itt hasznaljuk a pontosIdo fugvényt 
-pontosIdo();
-
-// pontosIdo2();
-// az ido valtozonak itt nincs ertelme, mert a pontosIdo fgv-en belul
-// deklaráltuk, 
-// console.log('a pontos ido: '+ido);
-
-
-// IIFE: immidiately invoked function expression:
-// ez egy névtelen fügvény ami egyből meghívódik
-// nem kell külön meghívni és nem is lehet
-(function() {
-  console.log('ez egyből meghívódik');
-})();
-
