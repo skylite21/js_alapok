@@ -220,7 +220,7 @@ while ( j < szamok.length ) {
 // ---------------------------------------------------------------------
 // -----------------------------  Fügvények  ---------------------------
 // ---------------------------------------------------------------------
-// a fügvény egy olyan kódrész, amit később újra fel tudunk használni
+// a függvény egy olyan kódrész, amit később újra fel tudunk használni
 // programming principle: DRY
 // DRY =  Dont Repeat Yourself
 
@@ -240,7 +240,7 @@ function osszeadas(szam1, szam2) {
   }
 }
 
-// itt használjuk fel az összeadás fügvényünket
+// itt használjuk fel az összeadás függvényünket
 osszeadas(6, 9);
 osszeadas('34', 9);
 

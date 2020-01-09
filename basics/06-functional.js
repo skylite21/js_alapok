@@ -1,3 +1,6 @@
+// functional programming
+// #Learnabout: https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
+
 let animals = [
   {neve: "Buffy", fajtaja:"macska"},
   {neve: "Fluffy", fajtaja:"kutya"},
@@ -9,8 +12,6 @@ let animals = [
 console.log("==========all animals========\n");
 console.log(animals);
 
-// functional programming
-// #Learnabout: https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
 let kutyak = []; 
 
 // filter returns an array containing the items where the inner function returns true

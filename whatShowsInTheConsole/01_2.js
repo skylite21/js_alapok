@@ -3,11 +3,15 @@
 
 
 //function declaration
+
+// clean code
+
+
 function addTwoNumbers(a, b) {
   return a + b;
 }
 
-let result = addTwoNumbers(4, 5);
+addTwoNumbers(4, 5);
 console.log(result);
 
 // function expression
