@@ -32,6 +32,11 @@ const requestAndHandleErrors = async () => {
 };
 // requestAndHandleErrors();
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// await new Promise(r => setTimeout(r, 2000));
 
 // we can create our own promises
 
