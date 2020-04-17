@@ -1,18 +1,31 @@
 
-// implicit global változó lesz a szoveg
-// global: a szoveg valtozo mindenhol elérhető lesz a kódban
-// implicit golbal valtozot lehetoleg ne hasznaljunk!
-szoveg = '3';
-console.log(szoveg);
+// a kódban mindenhol a két darab perjel után lévő rész: az a sor onnantól comment.
+
+/* ez is comment
+még mindíg
+idáig */
+
+// a comment-et nem próbálja a javascript kódként értelmezni, egyszerűen figyelmen
+// kívül hagyja
+
+// global variable: a valtozo mindenhol elérhető lesz a kódban
+// akkor használjuk ha egy változót a kód összes részében el akarunk érni
+// lehetőleg global valtozobol minél kevesebbet használjunk, mert memória igényes+insecure
+// úgy tudunk csinálni global változót hogy közvetlenül a file-on belül
+// és nem pedig egy fügvényen vagy classon vagy bármin belül hozzuk létre.
+
+var szoveg = 'valami'; // <- Global!
+
 
 //------------------------------------------------------- 
 //-------- SZEKVENCIA ----------------------------------- 
 //------------------------------------------------------- 
-// szekvencia: a program az utasításokat, soronként hajtja végre 
+// fontos alapelv: szekvencia: a program az utasításokat mindíg soronként hajtja végre 
+// egymás után.. line by line..
+// kivéve ha async! (később)
 
-// egymás után..
 
-// ez egy ujradeklarálható változó lesz (a kódban később is
+// var: ez egy ujradeklarálható változó lesz (a kódban később is
 // beírhatjuk hogy var szoveg2..
 var szoveg2 = 'valami';
 console.log(szoveg2);
@@ -21,21 +34,34 @@ console.log(szoveg2);
 var szoveg2 = 'valami';
 
 console.log('Hello\nEzt ujsorbairom\tEzt egytabbal beljebb irom');
+console.log('uj sort a \n karakterrel lehet csinalni');
+
+// soha nem használtam még de cli appoknál lehet kellene:
 console.log('XXXXXXXXXXXXXXXXXXXXX\rcarrige return');
-
-
 
 let szoveg3 = 'szoveg3 ezt let-el hoztuk letre';
 console.log(szoveg3);
 // a let kulcsszoval letrehozott valtozokat nem lehet ujradeklaralni, 
-// a kovetkezo sort ha nem kommentezzuk, hibat kapunk:
+// a kovetkezo sort ha nem kommentezzuk, hibat kapunk
+// mert már korábban a kódban létrehoztuk:
 // let szoveg3 = 'szoveg3 ezt let-el hoztuk letre';
 
-// ez egy értékadás, nem deklarálás: 
+// ez egy értékadás, nem deklarálás, ilyet bármikor lehet csinálni 
+// hogy új értéket adunk egy változónak. 
 szoveg3 = 'uj erteket kap a szoveg3';
 
-
 szoveg3 = 'uj erteket kap a szoveg3';
+
+// ha const-al hozzuk létre a változót, akkor viszont új értéket
+// sem kaphat.
+const pi = 3.14;
+console.log(pi);
+// ezt már nem lehet:
+// pi = 5.3;
+
+// alap szabály: mindíg const-ot használjunk, 
+// csak akkor használjunk let-et, ha később meg akarjuk
+// változtatni a változó értékét
 
 //------------------------------------------------------- 
 //------------------------------------------------------- 
@@ -49,8 +75,9 @@ szoveg3 = 'uj erteket kap a szoveg3';
 // Undefined: Egy olyan adattípus amelynek az értéke még nem meghatározott
 // Null: üres érték
 
-// Dynamic Typing: Nem szükséges definiálnunk a változók
-// típusát, automatikusan felismeri azokat a javascript
+// A javascript Dynamic Typing-olt nyelv: Nem szükséges 
+// definiálnunk a változók típusát, automatikusan 
+// felismeri azokat a javascript
 
 // automatic semicolon insertion:
 // ha kihagyjuk a pontosvesszőt, akkor a javascript
@@ -63,16 +90,18 @@ szoveg3 = 'uj erteket kap a szoveg3';
 console.log(szoveg3);
 
 // kiirathatunk egyszerre szoveget és változót is:
-let szam1 = 94;
-console.log('a szam1 valtozo értéke: '+szam1);
+let szam = 94;
+console.log('a szam valtozo értéke: '+szam);
+// vagy: template literals:
+console.log(`a szam valtozo értéke: ${szam}`);
 
 
 // a szoveg tipusa string:
 console.log('szoveg3 tiupsa: '+typeof(szoveg3));
 // a szam1 tipusát is kiiratjuk:
-console.log('szam1 valtozo tipusa: '+typeof(szam1));
+console.log('szam1 valtozo tipusa: '+typeof(szam));
 
-szam1 = 34;
+szam = 34;
 
 let a = 3;
 let b = 9;
@@ -89,6 +118,7 @@ console.log('a értéke: '+a+' b értéke: '+b);
 
 // boolean váltózó típus
 // logikai változó, két féle lehet, true vagy false
+// legkissebb helyet foglalja, (1bit!) de csak két értéked van
 let kapcsolo = false;
 
 // number tipusú változót egyel növelünk:
@@ -101,7 +131,7 @@ szam+=b;   // ez ugyanaz mintha azt írnánk hogy szam = szam + b;
 //-------- Elágazás -------------------------------------
 //------------------------------------------------------- 
 //
-// elágazás, ha a feltételben lévő rész igaz, akkor a {}-ban lévő rész
+// elágazás, ha a feltételben () lévő rész igaz, akkor a {}-ban lévő rész
 // lefut
 if (kapcsolo === true) {
   console.log('A kapcsolo be van kapcsolva');
@@ -111,27 +141,11 @@ if (kapcsolo === true) {
 
 let nev = 'Geza';
 
-// why not to use ==
-typeof(NaN); // 'number'
-0 == ''; //true
-'' == '0'; //false
-0 == '0'; //true
-false == 'false'; //false
-false == '0'; //true
-' \t\r\n ' == 0; //true
-
-// always use === to be sure, but still remember:
-
-NaN === NaN; // false
-NaN !== NaN; // true
-// use isNaN() 
-
-
 // három darab egyenlőségjellel hasonlítsunk össze értékeket
 // a háromdarab egyenlőségjel a típust is hasonlítja 
 // a kettő darab egyenlőségjel nem hasonlít tipust: pl
-// 3 == '3' > true
-// 3 === '3' > false
+3 == '3'; // true
+3 === '3'; // false
 
 if ( nev === 'Geza') {
   console.log('geza itt van');
@@ -148,30 +162,76 @@ if ( a > b ) {
 // ha csak egy lenne akkor nem vizsgálnánk a típust...
 // if ( a !== ) ...
 
+// why not to use ==
+// ha két darab egyenlőségjelet használsz,
+// a javascript nem fog típust vizsgálni,
+// és ez eléggé furcsa eredményeket szül:
+0 == ''; //true
+'' == '0'; //false
+0 == '0'; //true
+false == 'false'; //false
+false == '0'; //true
+' \t\r\n ' == 0; //true
+
+// mindíg 3db egyenlőségjellel vizsgálj értékeket
+// always use === to be sure, but still remember:
+// a NaN típus (Not a Number type) nagyon fura:
+typeof(NaN); // 'number'
+NaN === NaN; // false
+NaN !== NaN; // true
+// ha valamiről meg akarod nézni hogy NaN típusú e, 
+// használd az isNaN() fügvényt.
+// akkor kaphatsz NaN-t pl ha egy weboldalon a beviteli mezőkbe
+// a felhasználó által beütött értékeket nem konvertálod számmá 
+// mert amúgy előfordul hogy a user számot üt be és neked az 
+// számként is kell (matematikai műveleteket akarsz végezni rajta)
+// de a JS string-ként menti le.
+
+
 // ---------------------------------------------------------------------
 // ------------------------------   Operátorok -------------------------
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 
-console.log('uj sort a \n karakterrel lehet csinalni');
 
 // ---------------------------------------------------------------------
 // ------------------------------   Ciklusok ---------------------------
 // ---------------------------------------------------------------------
 
-// a {} -ban lévő rész addig fut, amíg a while-ban lévő feltétel igaz
+// a {} -ban lévő rész addig fut, amíg a ()-ban lévő feltétel igaz
+szam = 10;
 while ( szam > 0 ) {
   console.log('szam-bol levontunk egyet: '+szam);
   szam--;
 }
 
-// végtelen ciklus: 
+// végtelen ciklus: a {}-ban lévő rész, örökké fog futni
+// mert a while-ban lévő feltétel, soha nem lesz false
 // while (true) {
+// console.log('the world is infinite here');
 // }
 
-// ezt a változó típust tömbnek hívjuk
+// ezt a változó típust tömbnek hívjuk:
 // több elemet tartalmazhat a tömb
 let szamok = [3,4,5,6,4,6,9];
+
+// egy tömbnél nem számít hogy const-al hozzuk létre,
+// abból a szempontból, hogy a tömb elemei attól még
+// módosíthatóak lesznek, de ezután persze azt hogy
+// const mindenfele = ... ezt már később a kódban
+// nem írhatjuk le.
+// a tömb tartalmazhat elég sok típust:
+const mindenfele = [ 'ez egy string',
+  4,
+  {myKey: 'ez egy objecten belüli string'},
+  ['ez egy másik tömb amiben van egy string'],
+  NaN,
+  // a kapcsos zárójel végéig a tömbök elemeit soroljuk vesszővel
+  // elválasztva
+];
+
+
+// így is lehet tömböt csinálni
 let numbers = new Array(23, 34, 45, 5);
 
 console.log('a szamok típusa '+typeof(numbers));
@@ -197,8 +257,6 @@ console.log('x = '+(++x));
 console.log('x = '+(x++)); // ha mögé írod nem ad hozzá egyet ilyenkor!
 // you have to know what you're doing, even if its javascript 
 
-// for (let szam of szamok).... *see arrays...
-
 for (let i = 0; i < szamok.length; i++ ) {
   // a szamok i-edik elemét kiírjuk:
   console.log('a szam: '+szamok[i]);
@@ -211,6 +269,10 @@ for (let i = 0; i < szamok.length; i++ ) {
   }
 }
 
+// egy tömbön végig menni a for..of loop-al is lehet pl:
+// for (let szam of szamok).... *see in arrays.js
+
+// while-al is végig lehet menni egy tömbön, pl:
 let j = 0;
 while ( j < szamok.length ) {
   console.log('a szam: '+szamok[j]);
@@ -224,16 +286,21 @@ while ( j < szamok.length ) {
 // programming principle: DRY
 // DRY =  Dont Repeat Yourself
 
+// fügvényt létrehozni két féle képpen lehet
+// - function statement
+// - function expression
+
 // 1. function statement
-// erre érvényes a hoisting
-// statement: not produces any value, just performs an action
+// erre érvényes a hoisting *see hoisting.js
+// statement azt jelenti: not produces any value, just performs an action
+// ettől még egy fügvény produkálhat value-t.. nem a fügvényre monduk ezt, hanem a statement-re
 
 // az osszeadás fugvénynek két bementi paramétere van
 function osszeadas(szam1, szam2) {
   // a szam1 és a szam2 number tipusu kell hogy legyen (mindkettő feltétel
   // igaz kell hogy legyen, ezért rakunk közé  &&  (AND) jelet
   if ( (typeof(szam1) === 'number') && (typeof(szam2) === 'number') ) {
-    let eredmeny = szam1 + szam2;
+    const eredmeny = szam1 + szam2;
     console.log ('az eredmeny: '+eredmeny);
   } else {
     console.log ('error, nem számot kaptam!');
@@ -245,7 +312,7 @@ osszeadas(6, 9);
 osszeadas('34', 9);
 
 // 2. Function Expression
-// erre nem érvényes a hoisting
+// erre nem érvényes a hoisting *lásd: hoisting.js
 // expression: produces a value.. like 4 + 5 ...
 let convertToNumber = function(szam) {
   let konvertaltSzam = parseInt(szam);
@@ -262,3 +329,28 @@ convertToNumber('sdfsdf');
 
 // camelCasing = aMasodikSzotolMindenBetutNagyBetuvelIrok
 // JS-ben gyakran hasznnáljuk a camelCasing-et kivéve class-okra azoknak az első betűje is nagybetű
+// a camelCasing sok más programozási nyelvekben is használatos
+
+
+// programozásban még alap fogalmak:
+
+// intelisense, code completion: kód kiegészítés, ez lényegében
+// annyit jelent, hogy ha programozol, és jól vanbeállítva az editorod
+// akkor az editor ahogy gépelsz felajánlja neked a már begépelt szavakat,
+// beépített fügvényeket, metódusokat, stb, így nem kell mindent fejbetartani
+// és gyorsabb a gépelés is, mert kiválaszthatod a lenyíló menüből a felajánlott
+// dolgokat
+// code completion, vagy intelisense: amikor felajánlja a dolgokat az editor
+
+// syntax checker, vagy linter: a kódban lévő hibákra 
+// hívja fel a figyelmedet, és miközbe írod a kódot
+// az editorod figyelmeztet rá, ha valamit hibásan írsz. 
+// a linter által írt hibák még nembiztos hogy a kódod hibás futását
+// eredményezik, szoktak csak esztétikai dolgok is lenni...
+
+
+// mint minden programozási nyelvben, itt javascript-ben is 
+// számít az hogy milyen verziót használsz. 
+// a javascript különböző verzióit EcmaScript-nek hívjuk.
+// EcmaScript: a javascript szabvány verziói...
+// https://en.wikipedia.org/wiki/ECMAScript

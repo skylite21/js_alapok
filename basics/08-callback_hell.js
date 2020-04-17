@@ -1,10 +1,7 @@
 
-
-// ha a stöbb olyan fügvényünk van ami async és mindegyiket
-// egymás után akarjuk mindenképp futtatni akkor
-// az első megoldás nem jó mert ez mindhárom
-// teljesen egyszerre történik meg
-//callback hell
+// ha a stöbb olyan fügvényünk van ami async, vagy sok a callback, és mindegyiket
+// egymás után akarjuk mindenképp futtatni akkor:
+// callback hell
 function getServerStatus(id, callback) {
   setTimeout(function() {
     const result = `server ${id} is online`;
@@ -12,7 +9,9 @@ function getServerStatus(id, callback) {
   }, 1000);
 }
 
-// 1 megoldás:
+// 1 megoldás: természetesen nem működik, mind a három egyszerre fog lefutni:
+// holott mi azt akarnánk elérni hogy egymás után fussanak
+console.log('callback nélkül:');
 getServerStatus(1, function(error, result) {
   console.log(result);
 });
@@ -26,8 +25,10 @@ getServerStatus(3, function(error, result) {
 });
 
 
+console.log('callback-ekkel:');
 // 2. megoldás
-// itt már egymás után kérdezzük le a szerverek statusát de a kód undorító, 
+// itt már egymás után kérdezzük le a szerverek statusát de a kód undorító,
+// mert nehezen érthető, komplexebb kód átláthatatlan és érthetetlen lesz tőle
 // ezt hívják callback hell-nek
 
 getServerStatus(1, function(error, result) {

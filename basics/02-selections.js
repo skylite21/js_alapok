@@ -1,4 +1,3 @@
-
 //  --------------------------------------------------------------------
 
 //  Selection = elágazás 
@@ -21,7 +20,8 @@ if (age < 18 ) {
   // evaluated to false
   console.log(name+' férfi'); 
 }
-// this will always run
+
+// this will always run because it is outside of an if statement!!
 console.log('asd');
 
 //a really really pointless if statement:
@@ -36,10 +36,9 @@ if (1 === 1) {
 
 let job = 'engineer';
 
-// prompt: browser only;
-job = prompt('Mit dolgozik John?');
 
 // the switch statement is often use when there are multiple cases...
+// it's like a chain of if statements:
 switch (job) {
 case 'teacher':
   console.log('John tanít');
@@ -55,12 +54,16 @@ default:
 }
 
 
+// feladat:
+// a magasság és a kor összege alapján döntsük el hogy melyik játékos nyert.
+// prompt fgv csak browserben működik, nodejs-be be kellene importálni 
+// https://stackoverflow.com/questions/24291909/prompt-not-defined-using-node-from-command-line
+
+job = prompt('Mit dolgozik John?');
+
+
 let player1 = prompt('Első Játékos neve?');
 let player2 = prompt('Második játékos neve?');
 
 let player1Height = prompt (player1+' magassága?');
-
-// a magasság és a kor összege alapján döntsük el hogy melyik játékos nyert.
-
-
-
+// ...

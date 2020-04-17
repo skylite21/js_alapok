@@ -21,24 +21,26 @@
 //   console.log('after loop', i);
 //
 // })();
-// // but it will not work outside because var is function soped too (es6)
-// console.log('after loop', i);
+// // but it will not work here (outside) because var is function soped 
+// console.log('after loop', i); // -> produces error!
 
 
 // if you do not declare variables with a keyword, 
 // they will be scoped to the global object 
-// even if they are in a function: global 
-// variables are dangerous in complex code.  
+// even if they are in a function: global variables are
+// dangerous in complex code.  
 
 // (function() {
 //   for (i=0; i<10; i++) {
 //     console.log(i);
 //   }
 // })();
-//   console.log('after loop', i);
+
+// console.log('after loop', i);
 
 // it is a very good practice to use strict mode, as this will prevent
 // you from doing these mistakes
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 
 // "use strict"
 // (function() {
@@ -46,27 +48,25 @@
 //     console.log(i);
 //   }
 // })();
-//   console.log('after loop', i);
+// console.log('after loop', i);
 
 
-
-// if you use let the variable will be block scoped and function scoped as well.
+// if you use let keyword, the variable will be block scoped and function scoped as well.
 // for (let i=0; i<10; i++) {
 //   console.log(i);
 // }
 //
-// console.log('after loop', i);
-
+// console.log('after loop', i); // -> error i is not defined here
 
 
 // const is the best sollution if you do not need immutability. 
-// minimize mutable state is a universal programming paradigm
+// "minimize mutable state" is a universal programming paradigm
 // this way i will ALWAYS be 4. This is good to know!!
 
 // const i = 4;
-// i = 6; <--- will throw an error
+// i = 6; // <--- will throw an error
 
-// javascript is asyncronous and it can cause troubles as variables getting
+// javascript can be asyncronous, and it can cause troubles as variables getting
 // values in different order. This can result: "Once it works, once it does not"...
 // if you use const you can prevent variable reassignments and this is the safest way
 // when you do not need immutability.
@@ -74,7 +74,7 @@
 // const x = {
 //   y: '5'
 // };
-// x.y = '7'; // <-- this will still work though!
+// x.y = '7'; // <-- this will still work !
 
 // but this wont:
 // x = 'asd';
@@ -82,6 +82,9 @@
 // TL DR: always use const. If you need mutability, use let.
 
 
+// -----------------------
+// THE STORY OF SEMICOLONS
+// -----------------------
 
 // Why use semicolons:
 // whitout the semicolons this will fail as it will try to interpret this as: var i = 23423423(function...
@@ -105,6 +108,3 @@
 
 // also recklessly putting semicolons everywhere will not save you and 
 // will not fix your code if its bad code already...
-
-
-

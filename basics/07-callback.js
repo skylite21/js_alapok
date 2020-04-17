@@ -1,16 +1,15 @@
 let users = ['sam', 'john', 'peters'];
 
-
 // a setTimeout fügvénynek két bementi paramétre van 
 // az első az egy fügvény, a másik pedig egy szám...
-// a fügvényt futtatja le a megadott időn belül
+// a fügvényt futtatja le a megadott idő leteltével (3000 miliseconds)
 
 setTimeout(function(){ console.log('Done'); }, 3000);
 
-// arrow functionnel ugyanez:
+// rövideben írva az előző sor (arrow functionnel):
 setTimeout( () => console.log('done'), 3000 );
 
-// pl az addUser fügvény úgy fog működni hogy a users tömbbe 200 milisecundum
+// pl az addUser fügvény úgy fog működni hogy a users tömbbe 200 miliseconds
 // után beteszi az új elemet (a username bemeneti paraméterbe amit megkap)
 
 // function addUser(username) {
@@ -38,22 +37,24 @@ setTimeout( () => console.log('done'), 3000 );
 // egy callback functionként futtatjuk azt a fügvényt 
 // amit mindenképp később szeretnénk futtatni
 
-function addUser(username, callback) {
-  setTimeout( () => { 
-    users.push(username); 
-    callback();
-  }, 200 );
-}
+// function addUser(username, callback) {
+//   setTimeout( () => { 
+//     users.push(username); 
+//     callback();
+//   }, 200 );
+// }
 
-function getUsers() {
-  setTimeout( () => { console.log(users);
-  }, 100 );
-}
-
-addUser('Jim', getUsers);
+// function getUsers() {
+//   setTimeout( () => { console.log(users);
+//   }, 100 );
+// }
+//
+// // az előző két fügvényt "kényszerített" sorrendben
+// így tudjuk felhasználni: a getUsers egy callback:
+// addUser('Jim', getUsers);
 
 // callback-nek nevezzük az olyan fügvényt ami
-// paraméterként adódik át egy másik fügvényben.
+// paraméterként (bemeneti argumentumként) adódik át egy másik fügvényben.
 // a fenti példában a getUsers egy callback function
 // attól még hogy valami callback fügvény még nem biztos
 // hogy aszinkron. Itt a setTimeout fügvény az ami 
@@ -62,4 +63,4 @@ addUser('Jim', getUsers);
 
 // a functional programmingban, a map, és a reduce
 // callback functionökkel dolgozik, illetve 
-// az event listener-ek is 
+// az event listener-ek is * lásd, functional.js

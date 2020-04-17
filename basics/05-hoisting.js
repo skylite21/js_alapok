@@ -13,7 +13,7 @@ var palack = 'szilva';
 // előbb deklarálni és utána használni. a let kulcsszó előnyösebb, szebb lesz tőle a kód. 
 // console.log("y erteke: "+y); // let is not hoisted, so y doesnt exists here
 let y = 10;
-console.log("x erteke: "+x); // undefined, because its hoisted !! even in strict mode
+console.log('x erteke: '+x); // undefined, because its hoisted !! even in strict mode
 var x = 5;
 
 // ha var helyett let-et hasznalunk nem lesz hoisting es igy kevesebb a hibalehetoseg
@@ -24,9 +24,9 @@ var x = 5;
 // a hoisting
 
 // we can call foo, but we haven't even declared it yet !!
-console.log(foo())
+console.log(foo());
 function foo() {
-  return "foo returns: "+4
+  return 'foo returns: '+4;
 }
 
 // function expression esetén nincs hoisting (de még var-al se lenne...)
@@ -34,5 +34,6 @@ function foo() {
 // console.log(bar())
 let bar = function() {
   return 5;
-}
-
+};
+// we can only call bar after we declared it:
+console.log(bar());

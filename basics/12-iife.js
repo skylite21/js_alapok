@@ -1,6 +1,6 @@
 
 // IIFE:  'immediately invoked function expression' 
-//        egy olyan fügvény ami azonnal meghívódik
+// egy olyan fügvény ami azonnal meghívódik
 
 // IIFE: immidiately invoked function expression:
 // ez egy névtelen fügvény ami egyből meghívódik
@@ -18,7 +18,7 @@ let szamHozzaadas = (function() {
   };
 
 })(); // An 'immediately invoked function expression'
-//  is an expression that both creates and calls a function.
+// is an expression that both creates and calls a function.
 // az extra zarojel segit a kod olvasásban. If I see (function(){ I assume it's an IIFE
 // ha csak function expression-t hasznalsz akkor nincs szukseg az extra zarojelre ami
 // korul veszi az egesz functiont, de statement esetén problémát okozhat...

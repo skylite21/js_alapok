@@ -1,6 +1,6 @@
 // we can also create a chat application with sockets
-// this is a lower level
-// we'll use the net library
+// this is lower level
+// we'll use the net library instead of http
 const net = require('net');
 
 let sockets = [];
@@ -21,4 +21,10 @@ const s = net.Server( (socket) => {
   });
 } );
 
+console.log('server is listening at port 8000...');
+// a telnet programot telepíteni kell a gépedre, (windows-on pl putty tud telnetezni csak át kell kapcsolni!)
+// apt install telnet; brew install telnet...
+console.log('run `telnet localhost 8000` from multiple command line windows, and start typing');
 s.listen(8000);
+
+// https://www.youtube.com/watch?v=jo_B4LTHi3I
