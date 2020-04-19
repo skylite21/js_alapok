@@ -62,6 +62,7 @@ console.log(pi);
 // alap szabály: mindíg const-ot használjunk, 
 // csak akkor használjunk let-et, ha később meg akarjuk
 // változtatni a változó értékét
+// var-t soha ne használjunk!
 
 //------------------------------------------------------- 
 //------------------------------------------------------- 
