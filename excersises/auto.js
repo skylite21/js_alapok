@@ -2,7 +2,10 @@
 //  - addPassanger: hozzáad egy utast az utasokhoz (de max 5 lehet!)
 //  - printAllinfo: kiír minden információt (km óra, tank, utasok, rendszám)
 //  - going(kilóméter) : növeli a kilóméterórát és csökkenti a tankot
+//  - az autó osztály konstruktor-a egy string-et, az autó rendszámát használja fel
 
+
+// megoldás:
 
 class Car {
   constructor(plate) {
@@ -25,9 +28,9 @@ class Car {
       console.log('az auto tele van');
     } else {
       const passanger = {
-        "name": name,
-        "age": age
-      }
+        'name': name,
+        'age': age
+      };
       this.passangers.push(passanger);
     }
   }
