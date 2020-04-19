@@ -1,4 +1,3 @@
-
 console.log('1. összegzés tétele');
 
 let tomb = [1, 1, 1, 1];
@@ -11,7 +10,7 @@ for (let i=0; i<tomb.length; i++) {
   osszeg = osszeg + tomb[i];
 }
 
-console.log('a tomb elemeinek osszege: '+osszeg)
+console.log('a tomb elemeinek osszege: '+osszeg);
 
 console.log('2. lineáris keresés');
 let x = [ 4, 6, 3, 2, 1 ];
@@ -36,7 +35,7 @@ let scores = [2,4,1];
 let db = 0;
 for (let i=0; i<scores.length; i++) {
   if (scores[i] % 2 === 0) {
-    db = db + 1
+    db = db + 1;
   }
 }
 console.log(db+' darab páros szám van a scores tömbben');
