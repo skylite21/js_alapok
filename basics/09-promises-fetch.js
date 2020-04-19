@@ -69,7 +69,7 @@ const requestAndHandleErrors = async () => {
 requestAndHandleErrors();
 
 
-// itt egy saját fügvény ami promise-t ad vissza:
+// itt egy saját sleep fügvény ami promise-t ad vissza:
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -79,7 +79,7 @@ function sleep(ms) {
 // await new Promise(r => setTimeout(r, 2000));
 
 // we can create our own promises like this:
-// itt nem returnöljük a promise-t hanem konkrátan változóba tároljuk
+// itt nem returnöljük a promise-t hanem változóba tároljuk
 // ezért lesz neki .then metódusa (és használható lenne async fugvényen is)
 const getServerStatus = new Promise( (resolve, reject) => {
   let dataBase = true;
@@ -92,5 +92,5 @@ const getServerStatus = new Promise( (resolve, reject) => {
 
 getServerStatus.then( status => console.log(status) );
 
-// more example:
+// promise-okról mélyebben:
 // https://www.youtube.com/watch?v=SmPouEFKOBg

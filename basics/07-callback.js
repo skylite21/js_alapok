@@ -18,6 +18,10 @@ function sayHello(name, callback) {
 
 // a sayHello fügvény-t meghívjuk, melynek első argumentuma
 // egy string, a második argumentuma egy fügvény
+// fontos észrevenni hogy nem mi hívjuk meg a wave fügvényt nincs is ott a zárójel() !!
+// hanem majd a sayHello fügvény meghívja helyettünk amikor odaér...
+// a wave fügvény a bemeneti paraméterét sem itt kapja meg,
+// hanem már a sayHello fügvény-en belül
 sayHello('John', wave);
 
 // callback fügvény lehet anonym függvény is!
