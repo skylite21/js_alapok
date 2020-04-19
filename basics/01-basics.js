@@ -231,7 +231,7 @@ let szamok = [3,4,5,6,4,6,9];
 const mindenfele = [ 'ez egy string', // a tömb első eleme egy string
   4,    // a tömb második eleme egy number
   {myKey: 'ez egy objecten belüli string'},   // a tömb harmadik eleme egy object
-  ['ez egy másik tömb amiben van egy string'],// a tömb negyedik eleme egy tömb
+  ['ez egy másik tömb amiben van egy string', 'ez egy másik string'],// a tömb negyedik eleme egy tömb, kettő stringet tartalmaz
   NaN, // a tömb ötödik eleme egy NaN típus (not a number type)
   // a kapcsos zárójel végéig a tömbök elemeit soroljuk vesszővel
   // elválasztva
@@ -266,8 +266,8 @@ x += 1;
 console.log('x = '+x);
 
 console.log('x = '+(++x));
-console.log('x = '+(x++)); // ha mögé írod nem ad hozzá egyet ilyenkor!
-// you have to know what you're doing, even if its javascript 
+console.log('x = '+(x++)); // ha mögé írod nem ad hozzá egyet kiíráskor, de utána igen
+console.log(x); // itt viszont már növelve lesz az x 1-el az előző sor miatt
 
 for (let i = 0; i < szamok.length; i++ ) {
   // a szamok i-edik elemét kiírjuk:
@@ -290,6 +290,9 @@ while ( j < szamok.length ) {
   console.log('a szam: '+szamok[j]);
   j++;
 }
+console.log(j); // -- itt még létezik a j változó, míg
+// az előző két for ciklus esetén az i változó a ciklus 
+// után már nem él! *lásd var-let-const-semis.js
 
 // ---------------------------------------------------------------------
 // -----------------------------  Fügvények  ---------------------------
@@ -321,6 +324,9 @@ function osszeadas(szam1, szam2) {
 
 // itt használjuk fel az összeadás függvényünket
 osszeadas(6, 9);
+// ez hibát fog adni, 'error, nem számot kaptam' üzenetet fogunk látni
+// mert azelső paraméter egy string, a fügvény pedig ellenőrzi hogy stringet
+// kapott e...
 osszeadas('34', 9);
 
 // 2. Function Expression
