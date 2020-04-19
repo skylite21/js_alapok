@@ -36,7 +36,7 @@ var szoveg2 = 'valami';
 console.log('Hello\nEzt ujsorbairom\tEzt egytabbal beljebb irom');
 console.log('uj sort a \n karakterrel lehet csinalni');
 
-// soha nem használtam még de cli appoknál lehet kellene:
+// soha nem használtam még de cli appoknál lehet jó valamire:
 console.log('XXXXXXXXXXXXXXXXXXXXX\rcarrige return');
 
 let szoveg3 = 'szoveg3 ezt let-el hoztuk letre';
@@ -228,20 +228,19 @@ let szamok = [3,4,5,6,4,6,9];
 // const mindenfele = ... ezt már később a kódban
 // nem írhatjuk le.
 // a tömb tartalmazhat elég sok típust:
-const mindenfele = [ 'ez egy string', // a tömb első eleme egy string
-  4,    // a tömb második eleme egy number
-  {myKey: 'ez egy objecten belüli string'},   // a tömb harmadik eleme egy object
-  ['ez egy másik tömb amiben van egy string', 'ez egy másik string'],// a tömb negyedik eleme egy tömb, kettő stringet tartalmaz
-  NaN, // a tömb ötödik eleme egy NaN típus (not a number type)
+const mindenfele = [ 'ez egy string',         // a tömb első eleme egy string
+  4,                                          // a tömb második eleme egy number
+  {myKey: 'objecten belüli string'},          // a tömb harmadik eleme egy object
+  ['John', 'Peter'],                          // a tömb negyedik eleme egy tömb, kettő stringet tartalmaz
+  NaN,                                        // a tömb ötödik eleme egy NaN típus (not a number type)
   // a kapcsos zárójel végéig a tömbök elemeit soroljuk vesszővel
-  // elválasztva
+  // elválasztva. Ezt ahogy látod lehet külön sorokba is írni
 ];
 
 // a tömb elemeire így tudunk hivatkozni:
 console.log(mindenfele[0]); // 'ez egy string'
-console.log(mindenfele[2].myKey); // 'ez egy objecten belüli string'
-console.log(mindenfele[3][0]); // 'ez egy másik tömb amiben van egy string'
-
+console.log(mindenfele[2].myKey); // 'objecten belüli string'
+console.log(mindenfele[3][0]); // 'John'
 
 // így is lehet tömböt csinálni
 let numbers = new Array(23, 34, 45, 5);
