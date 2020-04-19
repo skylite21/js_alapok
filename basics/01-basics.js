@@ -342,6 +342,9 @@ let convertToNumber = function(szam) {
   }
 };
 
+// a javascriptben a fügvények valójában értékek.
+// functions are values!! read more: https://javascript.info/function-expressions
+
 convertToNumber('34');
 convertToNumber('sdfsdf');
 
