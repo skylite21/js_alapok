@@ -36,6 +36,36 @@ if (1 === 1) {
 
 let job = 'engineer';
 
+// Ternary operator
+
+// a JavaScript-ben van egy rövidebb jelölése is az if statement-nek,
+// ezt hívják ternary operator-nak. Nagyon egyszerű if statement-ek 
+// esetén elegánsabb megoldás lehet, azonban a kód nehezebben olvasható
+// tőle. A szintaxisa így néz ki:
+
+// feltétel ? érték ha igaz : érték ha hamis
+
+// például nézzük az alábbi if statement-et:
+
+let grade;
+let marks = 43;
+
+if (marks < 30) {
+  grade = 'Fail';
+}
+else {
+  grade = 'Pass';
+}
+
+console.log(grade);
+
+// az előző if statement ternary operator-al így nézne ki:
+grade = (marks < 30) ? 'Fail' : 'Pass';
+
+// az eredmény ugyanaz lesz
+console.log(grade);
+// read more: https://www.educative.io/edpresso/what-is-the-ternary-operator-in-javascript
+
 
 // the switch statement is often use when there are multiple cases...
 // it's like a chain of if statements:
