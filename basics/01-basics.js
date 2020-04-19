@@ -59,10 +59,16 @@ console.log(pi);
 // ezt már nem lehet:
 // pi = 5.3;
 
+
+//------------------------------------------------------- 
+//                var vs let vs const
+//------------------------------------------------------- 
+
 // alap szabály: mindíg const-ot használjunk, 
 // csak akkor használjunk let-et, ha később meg akarjuk
 // változtatni a változó értékét
 // var-t soha ne használjunk!
+// read more: https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75
 
 //------------------------------------------------------- 
 //------------------------------------------------------- 
@@ -222,14 +228,19 @@ let szamok = [3,4,5,6,4,6,9];
 // const mindenfele = ... ezt már később a kódban
 // nem írhatjuk le.
 // a tömb tartalmazhat elég sok típust:
-const mindenfele = [ 'ez egy string',
-  4,
-  {myKey: 'ez egy objecten belüli string'},
-  ['ez egy másik tömb amiben van egy string'],
-  NaN,
+const mindenfele = [ 'ez egy string', // a tömb első eleme egy string
+  4,    // a tömb második eleme egy number
+  {myKey: 'ez egy objecten belüli string'},   // a tömb harmadik eleme egy object
+  ['ez egy másik tömb amiben van egy string'],// a tömb negyedik eleme egy tömb
+  NaN, // a tömb ötödik eleme egy NaN típus (not a number type)
   // a kapcsos zárójel végéig a tömbök elemeit soroljuk vesszővel
   // elválasztva
 ];
+
+// a tömb elemeire így tudunk hivatkozni:
+console.log(mindenfele[0]); // 'ez egy string'
+console.log(mindenfele[2].myKey); // 'ez egy objecten belüli string'
+console.log(mindenfele[3][0]); // 'ez egy másik tömb amiben van egy string'
 
 
 // így is lehet tömböt csinálni
