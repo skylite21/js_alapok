@@ -6,6 +6,15 @@ const [ one, two ] = [ 1, 2 ];
 console.log(one); // 1
 console.log(two); // 2
 
+// az előző gyakorlatilag egyenértékű ezzel, csak szebb meg rövidebb.
+// const arr = [1, 2];
+// const one = arr[0];
+// const two = arr[1];
+
+
+// így nem kell külön egy változót se létrehozni a tömbnek
+// nyilván pl akkor van ennek létjogosultsága amikor a jobb 
+// oldalon egy fügvényhívás van ami tömböt ad vissza.
 
 const [ first, second ] = [ 1, 2 ];
 console.log(first); // 1
@@ -15,7 +24,7 @@ console.log(second); // 2
 // A sample object
 const myObject = { x: 1, y: 2 };
 
-// object Destructuring
+// object Destructuring:
 // az objectet is "szét lehet szedni"
 // így, kiszedjük az x és y változó értékeit és x, y váltózóként lementjük:
 const { x, y } = myObject;
