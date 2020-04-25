@@ -1,5 +1,4 @@
 
-
 // 10. what shows in the console?
 
 const toDos = ['buy potatos', '', 'take out the trash', 'clean the kitchen'];

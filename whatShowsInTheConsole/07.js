@@ -1,4 +1,3 @@
-
 // 7. what shows in the console?
 
 let a = 9;
@@ -14,6 +13,6 @@ if (a === NaN) {
 if(isNaN(a)) {
   console.log('a is not really a number');
 } else {
-  console.log("Wow it's a birdie!");
+  console.log('Wow it\'s a birdie!');
 }
 

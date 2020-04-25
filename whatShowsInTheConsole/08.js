@@ -26,6 +26,3 @@ console.log('first loop ended');
 // }
 //
 // console.log('third loop ended');
-
-
-

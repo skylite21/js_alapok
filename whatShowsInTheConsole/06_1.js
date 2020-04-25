@@ -12,9 +12,3 @@ if(appleCount > 0 && appleCount !== bananaCount) {
   console.log('we may have more apples than bananas');
 }
 
-
-
-
-
-
-

@@ -14,6 +14,3 @@ if(damage > 40 || armor > 40) {
   let speed = 50;
   console.log('we can run');
 }
-
-
-

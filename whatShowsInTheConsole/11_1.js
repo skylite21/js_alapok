@@ -11,9 +11,8 @@ console.log(names);
 console.log(people);
 console.log(...people);
 
-
 // in function(...nums) > called 'rest', (array inside the function)
-let addNumbers = function(...nums) {
+let sumNumbers = function(...nums) {
 
   let sum = 0;
   for( let i=0; i < nums.length; i++ ) {
@@ -24,5 +23,5 @@ let addNumbers = function(...nums) {
   // return nums.reduce((a, b) => a + b);
 };
 
-console.log(addNumbers(1,4,1,0));
+console.log(sumNumbers(1,4,1,0));
 

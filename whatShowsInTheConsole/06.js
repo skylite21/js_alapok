@@ -11,9 +11,6 @@ if (a > b) {
 }
 
 
-
-
-
 let score = '10';
 
 if (10 == score) {

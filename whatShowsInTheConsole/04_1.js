@@ -17,5 +17,3 @@ cook();
 function cook() {
   console.log('make a '+food);
 }
-
-

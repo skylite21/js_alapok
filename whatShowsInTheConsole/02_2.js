@@ -1,7 +1,9 @@
 
 // 2.2 what shows in the console?
 
-let health = 100;
+let health = 100; // number
+
+// arrow function
 let shoot = () => {
   console.log('That arrow hits you');
   health = health - 10;

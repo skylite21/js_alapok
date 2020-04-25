@@ -5,6 +5,7 @@ const getUserData = function() {
     weight: 50,
     hair: 'brown'
   };
+
   console.log(data);
   return data;
 };
@@ -13,10 +14,12 @@ getUserData();
 
 console.log(getUserData);
 
+// IIFE
 const user = (function(){
-  const user = 'John';
-  console.log(`you are logged in as ${user}`);
-  return user;
+  const userName = 'John';
+  console.log(`you are logged in as ${userName}`);
+  // console.log('you are logged in as '+userName);
+  return userName;
 })();
 console.log(user);
 
@@ -25,3 +28,4 @@ console.log(user);
   console.log(`user role is ${userRole}`);
   return userRole;
 })();
+
