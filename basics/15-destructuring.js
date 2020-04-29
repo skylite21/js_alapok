@@ -66,6 +66,10 @@ myFunctionDest({
   truncate: 100
 });
 
+
+const { outer: [ {inner: a} ]} = {outer:[{inner: {x:'a'} }]};
+console.log(a);
+
 // https://simonsmith.io/destructuring-objects-as-function-parameters-in-es6
 
 // https://2ality.com/2015/01/es6-destructuring.html
