@@ -3,8 +3,7 @@
 
 let health = 100; // number
 
-// arrow function
-let shoot = () => {
+let shoot = function() {
   console.log('That arrow hits you');
   health = health - 10;
   console.log('Your health is: '+health);
@@ -12,7 +11,8 @@ let shoot = () => {
 
 shoot();
 
-let heal = function() {
+// arrow function
+let heal = () => {
   console.log('You healed.');
   health = health + 10;
   console.log('Your health is: '+health);
