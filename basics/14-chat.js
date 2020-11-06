@@ -1,6 +1,8 @@
 // we can also create a chat application with sockets
 // this is lower level
 // we'll use the net library instead of http
+//
+// this is nodeJS only!!!!
 const net = require('net');
 
 let sockets = [];
@@ -27,4 +29,5 @@ console.log('server is listening at port 8000...');
 console.log('run `telnet localhost 8000` from multiple command line windows, and start typing');
 s.listen(8000);
 
-// https://www.youtube.com/watch?v=jo_B4LTHi3I
+// this code was taken from the following video:
+// https://youtu.be/jo_B4LTHi3I?t=1702

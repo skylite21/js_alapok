@@ -110,15 +110,17 @@ console.log(task.title);
 console.log(task.description);
 console.log(task.showAllInfo());
 
-// -------------------------------------------------------------------
-// --------------------  objects, classes ES6 way --------------------
-// -------------------------------------------------------------------
-
-// a javascriptben csinálhatunk class-okat is
-// amik object-eket generálnak egy "template" alapján
-// a class-ok neveit nagybetűvel szokták írni
-// a classokat általában hierarchiába építjük fel, az újrafelhasználhatóság
-// miatt. https://javascript.info/class-inheritance
+/*
+ * -------------------------------------------------------------------
+ * --------------------  objects, classes ES6 way --------------------
+ * -------------------------------------------------------------------
+ * 
+ * a javascriptben csinálhatunk class-okat is
+ * amik object-eket generálnak egy "template" alapján
+ * a class-ok neveit nagybetűvel szokták írni
+ * a classokat általában hierarchiába építjük fel, az újrafelhasználhatóság
+ * miatt. https://javascript.info/class-inheritance
+ */
 class Animal {
   // a class construktor-a minden példányosításkor lefut
   constructor() {
@@ -133,11 +135,13 @@ class Animal {
 // létrehozunk egy alosztályt ami örökli a szülő osztály összes dolgát
 class Dog extends Animal {
   constructor(name) {
-    // mivel ez egy alosztály ezért kell a super() fgv... a this kulcsszót 
-    // nem tudjuk használni egy alosztályban amíg nem hívjuk meg a super()-t
-    // In a child class constructor, 'this' cannot be used until super is called.
-    // ES6 class constructors MUST call super if they are subclasses, or they must 
-    // explicitly return some object to take the place of the one that was not initialized.
+    /*
+     * mivel ez egy alosztály ezért kell a super() fgv... a this kulcsszót 
+     * nem tudjuk használni egy alosztályban amíg nem hívjuk meg a super()-t
+     * In a child class constructor, 'this' cannot be used until super is called.
+     * ES6 class constructors MUST call super if they are subclasses, or they must 
+     * explicitly return some object to take the place of the one that was not initialized.
+     */
     super(name);
     this.name = name; 
     this.race = 'dog';
@@ -195,20 +199,22 @@ mutantDog1.legscount = 5;
 console.log(mutantDog1.name+' lábainak száma: '+mutantDog1.legscount);
 mutantDog1.speak();
 
-// az objektum orientált programozás az egyik legalapvetőbb
-// programozási elv, fontos jól ismerni a lényegét
-// https://en.wikipedia.org/wiki/Object-oriented_programming
-
-
-// -------------------------------------------------------------------
-// --------------------  classes, ES5 way...  --------------------
-// -------------------------------------------------------------------
-
-// a továbbiak ugyanazokat mutatják be mint az előző class-os példák
-// de ezek a régebbi verziójú, ES5 javascript-ben voltak így használva
-// ha meg akarod érteni a javascript működését mélyebben, akkor fontos ezeket ismerni
-
-// function constructor: ez lényegében egy class
+/*
+ * az objektum orientált programozás az egyik legalapvetőbb
+ * programozási elv, fontos jól ismerni a lényegét
+ * https://en.wikipedia.org/wiki/Object-oriented_programming
+ * 
+ * 
+ * -------------------------------------------------------------------
+ * --------------------  classes, ES5 way...  --------------------
+ * -------------------------------------------------------------------
+ * 
+ * a továbbiak ugyanazokat mutatják be mint az előző class-os példák
+ * de ezek a régebbi verziójú, ES5 javascript-ben voltak így használva
+ * ha meg akarod érteni a javascript működését mélyebben, akkor fontos ezeket ismerni
+ * 
+ * function constructor: ez lényegében egy class
+ */
 var Cat = function (name) {
   this.name = name;
   this.color = 'black';

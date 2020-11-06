@@ -26,14 +26,18 @@ function pontosIdo() {
 // itt hasznaljuk a pontosIdo fugvényt 
 pontosIdo();
 
-// ez a fugvény itt nem elérhető mert belül hoztuk létre
-// egy fügvény belseje az egy másik scope, az kívül nem létezik már
-// ami csak bent lett létrehozva is... ha kívül lett létrehozva az más:
-// akkor elérhető lenne de ez hibát dobna itt:
+/*
+ * ez a fugvény itt nem elérhető mert belül hoztuk létre
+ * egy fügvény belseje az egy másik scope, az kívül nem létezik már
+ * ami csak bent lett létrehozva is... ha kívül lett létrehozva az más:
+ * akkor elérhető lenne de ez hibát dobna itt:
+ */
 // pontosIdoMulik();
-// az ido valtozonak sincs itt értelme, mert a pontosIdo fgv-en belul
-// deklaráltuk:
-// console.log('a pontos ido: '+ido); // hibát dob
+/*
+ * az ido valtozonak sincs itt értelme, mert a pontosIdo fgv-en belul
+ * deklaráltuk:
+ * console.log('a pontos ido: '+ido); // hibát dob
+ */
 
 
 let koszonjNekem = function (keresztNev) {
@@ -46,12 +50,14 @@ let koszonjNekem = function (keresztNev) {
 
 console.log(koszonjNekem('John'));
 
-// every function returns something when it finishes
-//  A function declaration `function declared() {}` this is hoisted!, you can use this before you declare it
-//  A function expression e.g. `var bar = function expressed() {}`
-//  which can be immediately invoked (see IIFE) and can be anonymous
-//  (eg can omit the name 'expressed'). 'function' as the first word of a statement at global scope
-//  or directly inside a function starts a function declaration; otherwise, it starts a function expression.
+/*
+ * every function returns something when it finishes
+ * A function declaration `function declared() {}` this is hoisted!, you can use this before you declare it
+ * A function expression e.g. `var bar = function expressed() {}`
+ * which can be immediately invoked (see IIFE) and can be anonymous
+ * (eg can omit the name 'expressed'). 'function' as the first word of a statement at global scope
+ * or directly inside a function starts a function declaration; otherwise, it starts a function expression.
+ */
 
 function aFunc () { //ez function statement ez hoisted
   var aa;

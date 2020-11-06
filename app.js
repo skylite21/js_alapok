@@ -38,7 +38,6 @@
     console.log('hello');
     // kiválasztjuk a menu id-vel rendelkező html elemet és átírjuk a tartalmát
     $('#menu').text('Main menu');
-    // camelCase mindenSzoNagyBetuKiveveAzElso
 
     // lekérdezzük a #menu id tartalmát és betöltjük egy változóba
     let menuTitle = $('#menu').text();

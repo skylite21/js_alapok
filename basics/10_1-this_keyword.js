@@ -1,11 +1,13 @@
-// a this keyword általánosságban mindíg egy olyan objektumot jelent
-// az adott kontextusban. Hogy mi épp az adott kontextus, pl a böngészőben
-// ha csak megnézed a 
-// console.log(this);
-// sort, akkor az a window object lesz...
-
-// egy class-on belül a this, mindíg a példányosított konkrét objektumot jelenti
-// mikor már példányosítottuk...
+/*
+ * a this keyword általánosságban mindíg egy olyan objektumot jelent
+ * az adott kontextusban. Hogy mi épp az adott kontextus, pl a böngészőben
+ * ha csak megnézed a 
+ * console.log(this);
+ * sort, akkor az a window object lesz...
+ * 
+ * egy class-on belül a this, mindíg a példányosított konkrét objektumot jelenti
+ * mikor már példányosítottuk...
+ */
 
 // if we want to see the 'this' keyword in nodejs, we have to wrap everything inide an IIFE
 (function() {

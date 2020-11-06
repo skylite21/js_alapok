@@ -1,16 +1,18 @@
-// ha több olyan fügvényünk van ami async, vagy sok a callback, és mindegyiket
-// egymás után akarjuk mindenképp futtatni akkor kerülünk szembe
-// azzal a jelenséggel amit úgy hívnak hogy:
-// callback hell
-
-// vegyük az alábbi fügvényt ami lekérdezi egy adott
-// szerver status-át, id alapján, majd a státusz
-// lekérdezése után futtatunk egy callback-et.
-// a callback első paramétere egy null (ide tehetnénk egy kis)
-// hiba kezelést, mondjuk egy if-et, amikor is az első paraméter
-// a hiba lenne, a második pedig az eredmény amit kaptunk
-// ezt hívják error first callback function-nek:
-// https://www.youtube.com/watch?v=0h8r2K7ZHZU
+/*
+ * ha több olyan fügvényünk van ami async, vagy sok a callback, és mindegyiket
+ * egymás után akarjuk mindenképp futtatni akkor kerülünk szembe
+ * azzal a jelenséggel amit úgy hívnak hogy:
+ * callback hell
+ * 
+ * vegyük az alábbi fügvényt ami lekérdezi egy adott
+ * szerver status-át, id alapján, majd a státusz
+ * lekérdezése után futtatunk egy callback-et.
+ * a callback első paramétere egy null (ide tehetnénk egy kis)
+ * hiba kezelést, mondjuk egy if-et, amikor is az első paraméter
+ * a hiba lenne, a második pedig az eredmény amit kaptunk
+ * ezt hívják error first callback function-nek:
+ * https://www.youtube.com/watch?v=0h8r2K7ZHZU
+ */
 
 function getServerStatus(id, callback) {
   setTimeout(function() {
@@ -61,10 +63,12 @@ getServerStatus(1, function(error, result) {
   });
 });
 
-// ha még error handlinget is szeretnénk akkor igy nézne ki:
-// undorító, átláthatatlan, kezelhetetlen, fenntarthtatlan... 
-// de régen csak ez volt! hálistennek ma már vannak Promise-ok és async
-// fügvények *lásd: promises-fetch.js
+/*
+ * ha még error handlinget is szeretnénk akkor igy nézne ki:
+ * undorító, átláthatatlan, kezelhetetlen, fenntarthtatlan... 
+ * de régen csak ez volt! hálistennek ma már vannak Promise-ok és async
+ * fügvények *lásd: promises-fetch.js
+ */
 
 getServerStatus(1, function(error, result) {
   if (error) {
