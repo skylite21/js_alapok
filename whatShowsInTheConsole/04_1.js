@@ -7,8 +7,8 @@ let vehicle = 'bus';
 var drive = function() {
   console.log('driving a '+vehicle);
 };
-
 drive();
+
 
 let food = 'pizza';
 cook();
