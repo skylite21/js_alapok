@@ -4,7 +4,7 @@ let counter = 3;
 
 while( counter > 1 ) {
   console.log(counter);
-  counter--; 
+  counter--;  // counter = counter -1;
 }
 
 console.log('first loop ended');

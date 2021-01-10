@@ -9,6 +9,7 @@ for (let i = 0; i < scores.length; i++) {
   }
 }
 
+// for of loop...
 for (let score of scores) {
   if(score <= 50) {
     console.log('under minimum');
