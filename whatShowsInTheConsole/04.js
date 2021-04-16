@@ -8,10 +8,10 @@ console.log(f);
 console.log(v);
 var v;
 
-console.log(t);
 const t = 0;
+console.log(t);
 
-console.log(r);
 let r;
+console.log(r);
 
 

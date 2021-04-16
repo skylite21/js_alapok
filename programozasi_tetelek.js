@@ -13,13 +13,13 @@ for (let i=0; i<tomb.length; i++) {
 console.log('a tomb elemeinek osszege: '+osszeg);
 
 console.log('2. lineáris keresés');
-let x = [ 4, 6, 3, 2, 1 ];
+let x = [ 4, 6, 5, 2, 3 ];
 let van = false;
 let i = 0;
 while (i < x.length && x[i] !== 3 ) {
   i = i + 1;
 }
-if (i <= x.length) {
+if (i < x.length) {
   van = true;
 }
 console.log(' van találat: '+van);

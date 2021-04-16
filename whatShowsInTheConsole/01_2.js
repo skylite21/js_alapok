@@ -6,8 +6,11 @@ function addTwoNumbers(a, b) {
   return a + b;
 }
 
-addTwoNumbers(4, 5);
-// console.log(result);
+// we are calling the function
+let result = addTwoNumbers(4, 5);
+
+console.log(result);
+
 
 // function expression
 let addThreeNumbers = function(a, b, c) {

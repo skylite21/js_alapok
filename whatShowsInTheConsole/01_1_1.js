@@ -3,10 +3,10 @@
 
 function addTwoNumbers(a, b) {
   const c = a + b;
+  return c;
 }
 
 console.log(addTwoNumbers(4, 5));
 
-const result = addTwoNumbers(2, 3);
 
 

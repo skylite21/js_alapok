@@ -3,17 +3,16 @@
 
 let x = console.log('hello');
 
+console.log(x);
+
 // function expression
 let y = function () {
   console.log('hello');
 };
 
-console.log(x);
-
-
 let myfunc = function() {
   return;
 };
 
-console.log(myfunc);
+console.log(test);
 console.log(myfunc());
