@@ -128,7 +128,7 @@ class Animal {
   }
   // all living things must eat
   eat() {
-    console.log(this.name+' is eating...');
+    console.log('eating...');
   }
 }
 
@@ -142,7 +142,7 @@ class Dog extends Animal {
      * ES6 class constructors MUST call super if they are subclasses, or they must 
      * explicitly return some object to take the place of the one that was not initialized.
      */
-    super(name);
+    super();
     this.name = name; 
     this.race = 'dog';
     // ezzel létrehozunk egy nem írható property-t
