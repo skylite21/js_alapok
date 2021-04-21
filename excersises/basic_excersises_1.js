@@ -1,7 +1,7 @@
 // 1. készíts egy programot ami az alábbi tömbben eldönti 
 // az összes elemről hogy osztható e kettővel vagy nem
 // 
-let nums = [3,4,9,6,2];
+const nums = [3,4,9,6,2];
 
 // a kettővel oszthatóság ellenőrzését maradékos osztással
 // kell megnézni:
@@ -20,7 +20,7 @@ let nums = [3,4,9,6,2];
 // 2. készíts egy programot ami kiirja a tömb összes elemét
 // de úgy hogy az indexét is pl:
 // ebből:
-let players = ['Peter', 'Kate', 'John'];
+const players = ['Peter', 'Kate', 'John'];
 
 // ezt írja ki:
 // 0. Peter
@@ -29,15 +29,16 @@ let players = ['Peter', 'Kate', 'John'];
 
 
 // 3. készíts egy fügvényt ami megvizsgálja egy elem 
-// összes tipusát, és kigyűjti őket egy tömbbe.
-// pl ebből: 
+// összes tipusát, és kigyűjti őket egy új tömbbe.
+// pl ebből a tömbből:
 
-let x = ['', 4, true];
-// ezt csinálja:
+const x = ['', 4, true];
+// egy ilyen tömböt hoz létre:
 
 // [ 'string', 'number', 'boolean' ]
 
-// Először hozz létre egy üres tömböt, és a .push 
+// Ehhez először hozz létre egy üres tömböt, és a .push 
 // függvénnyel add hozzá a típusokat így:
-// let a = ['first'];
-// a.push['second'] // a is now: ['first', 'second']
+// const test = 3;
+// const a = [];
+// a.push[typeof(test)]
