@@ -13,8 +13,6 @@
     "live-server": "^1.2.1"
   },
   "dependencies": {
-    "jquery": "^3.5.0",
-    "magnific-popup": "^1.1.0",
     "node-fetch": "^2.6.1"
   }
 }
