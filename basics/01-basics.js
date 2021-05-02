@@ -13,7 +13,7 @@ idáig */
  * akkor használjuk ha egy változót a kód összes részében el akarunk érni
  * lehetőleg global valtozobol minél kevesebbet használjunk, mert memória igényes+insecure
  * úgy tudunk csinálni global változót hogy közvetlenül a file-on belül
- * és nem pedig egy fügvényen vagy classon vagy bármin belül hozzuk létre.
+ * és nem pedig egy fügvényen vagy classon vagy bármilyen egyéb scopeon belül hoztunk létre
  */
 
 var szoveg = 'valami'; // <- Global!
@@ -31,6 +31,7 @@ var szoveg = 'valami'; // <- Global!
 
 // var: ez egy ujradeklarálható változó lesz (a kódban később is
 // beírhatjuk hogy var szoveg2..
+// ezen kívül function scoped.
 var szoveg2 = 'valami';
 console.log(szoveg2);
 
@@ -46,14 +47,15 @@ console.log('XXXXXXXXXXXXXXXXXXXXX\rcarrige return');
 let szoveg3 = 'szoveg3 ezt let-el hoztuk letre';
 console.log(szoveg3);
 /*
+ * A a let kulcsszóval létrehozott változó: block scoped.
  * a let kulcsszoval letrehozott valtozokat nem lehet ujradeklaralni, 
- * a kovetkezo sort ha nem kommentezzuk, hibat kapunk
+ * a kovetkezo sorbol ha kivesszük a commentet, hibat kapunk
  * mert már korábban a kódban létrehoztuk:
  */
 // let szoveg3 = 'szoveg3 ezt let-el hoztuk letre';
 
 // ez egy értékadás, nem deklarálás, ilyet bármikor lehet csinálni 
-// hogy új értéket adunk egy változónak. 
+// hogy új értéket adunk egy változónak. Kivéve ha az const...
 szoveg3 = 'uj erteket kap a szoveg3';
 
 szoveg3 = 'uj erteket kap a szoveg3';
@@ -62,7 +64,7 @@ szoveg3 = 'uj erteket kap a szoveg3';
 // sem kaphat.
 const pi = 3.14;
 console.log(pi);
-// ezt már nem lehet:
+// ezt már nem lehet (erre hibat kapnank)
 // pi = 5.3;
 
 
@@ -106,7 +108,8 @@ console.log(szoveg3);
 // kiirathatunk egyszerre szoveget és változót is:
 let szam = 94;
 console.log('a szam valtozo értéke: '+szam);
-// vagy: template literals:
+// vagy: template literalst használva:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 console.log(`a szam valtozo értéke: ${szam}`);
 
 
@@ -128,6 +131,8 @@ let c = a;
 a = b;
 b = c;
 
+// 🍺 🧐 🍷 ?
+
 console.log('a értéke: '+a+' b értéke: '+b);
 
 /*
@@ -138,7 +143,7 @@ console.log('a értéke: '+a+' b értéke: '+b);
 let kapcsolo = false;
 
 // number tipusú változót egyel növelünk:
-szam++; // ez egy rövidebb jelölése annak hogy szam=szam+1
+szam++; // ez egy rövidebb jelölése annak hogy szam+1
 
 // number tipust egy másikkal növelünk:
 szam+=b;   // ez ugyanaz mintha azt írnánk hogy szam = szam + b;
@@ -157,13 +162,17 @@ if (kapcsolo === true) {
   console.log('A kapcsolo ki van kapcsolva');
 }
 
-let nev = 'Geza';
 
 // három darab egyenlőségjellel hasonlítsunk össze értékeket
 // a háromdarab egyenlőségjel a típust is hasonlítja 
-// a kettő darab egyenlőségjel nem hasonlít tipust: pl
+// a kettő darab egyenlőségjel nem hasonlít tipust: pl:
 3 == '3'; // true
 3 === '3'; // false
+// az előző két sorban is megtörténik a hasonlítás csak nem történik semmi az értékkel.
+let myCondition = 3 === '3';
+console.log('my condition is: '+myCondition);
+
+let nev = 'Geza';
 
 if ( nev === 'Geza') {
   console.log('geza itt van');
@@ -199,6 +208,7 @@ false == '0'; //true
 typeof(NaN); // 'number'
 NaN === NaN; // false
 NaN !== NaN; // true
+
 /*
  * ha valamiről meg akarod nézni hogy NaN típusú e, 
  * használd az isNaN() fügvényt.
@@ -263,7 +273,7 @@ console.log(mindenfele[0]); // 'ez egy string'
 console.log(mindenfele[2].myKey); // 'objecten belüli string'
 console.log(mindenfele[3][0]); // 'John'
 
-// így is lehet tömböt csinálni
+// így is lehet tömböt csinálni (array is object!)
 let numbers = new Array(23, 34, 45, 5);
 
 console.log('a szamok típusa '+typeof(numbers));
