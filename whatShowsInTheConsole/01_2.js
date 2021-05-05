@@ -17,7 +17,7 @@ let addThreeNumbers = function(a, b, c) {
   return a + b + c;
 };
 
-let result = addThreeNumbers(2,4,5);
+result = addThreeNumbers(2,4,5);
 
 console.log(result);
 
