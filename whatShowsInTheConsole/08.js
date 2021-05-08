@@ -1,7 +1,7 @@
 // what shows in the console?
 
 let counter = 3;
-//
+
 // while( counter > 1 ) {
 //   console.log(counter);
 //   counter--;  // counter = counter -1;
@@ -13,12 +13,12 @@ let counter = 3;
 // counter = 3;
 //
 // while( counter > 1 ) {
-// counter--;
+//   counter--;
 //   console.log(counter);
 // }
 //
 // console.log('second loop ended');
-//
+
 
 counter = 0;
 

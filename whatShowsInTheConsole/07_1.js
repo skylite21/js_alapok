@@ -10,7 +10,11 @@ if( (weapon === 'hammer') && (armor > 50) ) {
   console.log('extra damage!');
 } 
 
+let speed = 10;
 if(damage > 40 || armor > 40) {
   let speed = 50;
   console.log('we can run');
 }
+
+console.log(speed);
+

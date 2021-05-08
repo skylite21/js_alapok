@@ -1,16 +1,17 @@
-
-// ... is the spread operator
-
-const winners = ['John', 'Peter', 'Kate'];
-const loosers = ['Anna', 'Steve', 'David'];
-
-const names = [winners, loosers];
-const people = [...winners, ...loosers];
-
-console.log(names);
-console.log(people);
-console.log(...people);
-
+//
+//
+// const winners = ['John', 'Peter', 'Kate'];
+// const loosers = ['Anna', 'Steve', 'David'];
+//
+// const names = [winners, loosers];
+// console.log(names);
+//
+// // ... is the spread operator
+// const people = [...winners, ...loosers];
+// console.log(people);
+//
+// console.log(...people);
+// //
 // in function(...nums) > called 'rest', (array inside the function)
 let sumNumbers = function(...nums) {
 
@@ -23,5 +24,4 @@ let sumNumbers = function(...nums) {
   // return nums.reduce((a, b) => a + b);
 };
 
-console.log(sumNumbers(1,4,1,0));
-
+console.log(sumNumbers(1,4,1,0,1,1));

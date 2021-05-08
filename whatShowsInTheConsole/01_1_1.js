@@ -7,6 +7,3 @@ function addTwoNumbers(a, b) {
 }
 
 console.log(addTwoNumbers(4, 5));
-
-
-

@@ -14,5 +14,5 @@ let myfunc = function() {
   return;
 };
 
-console.log(test);
+console.log(y);
 console.log(myfunc());

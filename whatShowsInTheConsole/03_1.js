@@ -10,4 +10,4 @@ console.log(a+'a');
 let h = 'h';
 console.log(h+'ello');
 
-// let 9 = 10;
+let 9 = 10;
