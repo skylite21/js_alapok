@@ -6,5 +6,5 @@ req.onreadystatechange = function() {
     const breeds = Object.keys(response.message);
     console.log(breeds[0]);
   }
-}
+};
 req.send();

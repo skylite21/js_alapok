@@ -8,7 +8,7 @@ if (appleCount > bananaCount && bananaCount === 5) {
   console.log('we have more than 5 apples');
 }
 
-if(appleCount > 0 && appleCount !== bananaCount) {
+if (appleCount > 0 && appleCount !== bananaCount) {
   console.log('we may have more apples than bananas');
 }
 
